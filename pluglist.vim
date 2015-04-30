@@ -1,0 +1,10 @@
+" Loads plugins using Vundle
+Plugin 'gmarik/Vundle.vim'
+Plugin 'tpope/vim-fugitive'
+Plugin 'wincent/command-t'
+"Plugin 'davidhalter/jedi-vim'
+Plugin 'junegunn/vim-easy-align'
+Plugin 'godlygeek/tabular'
+Plugin 'plasticboy/vim-markdown'
+Plugin 'tpope/vim-surround'
+Plugin 'vim-scripts/Vim-R-plugin'
