@@ -53,17 +53,14 @@ set foldmethod=indent	" fold based on indent level
 "Movement
 nnoremap j gj		" move based on visual lines
 nnoremap k gk
-nnoremap gv `[v`]
+nnoremap gv `[v`]       " select entire file 
 
 "Fast save
-nnoremap <leader>w :w<CR>
+nnoremap <leader><ENTER> :w<CR>
 
 "VIMRC
 nnoremap <leader>ev :vsp ~/.vim/.vimrc<CR>
 nnoremap <leader>sv :source $MYVIMRC<CR>
-
-"Launch configuration
-set noswapfile
 
 " Command-t shortcuts
 noremap <leader>o <Esc>:CommandT<CR>
@@ -93,6 +90,6 @@ imap <C-h> <C-d>
 nmap <F9> :SCCompile<CR>
 nmap <F10> :SCCompileRun<cr>
 
-" FORTRAN - always use free_source
-:let fortran_free_source=1
-
+" Git
+nmap <leader>gs :Gstatus<CR>
+nmap <leader>gc :Gcommit<CR>
