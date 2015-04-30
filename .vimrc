@@ -50,10 +50,12 @@ set foldlevelstart=10
 set foldnestmax=10
 set foldmethod=indent	" fold based on indent level
 
-"Movement
-nnoremap j gj		" move based on visual lines
+"Move based on visual lines 
+nnoremap j gj
 nnoremap k gk
-nnoremap gv `[v`]       " select entire file 
+
+"Select entire file
+nnoremap gv `[v`]
 
 "Fast save
 nnoremap <leader><ENTER> :w<CR>
@@ -91,5 +93,6 @@ nmap <F9> :SCCompile<CR>
 nmap <F10> :SCCompileRun<cr>
 
 " Git
-nmap <leader>gs :Gstatus<CR>
-nmap <leader>gc :Gcommit<CR>
+nmap <C-g>s :Gstatus<CR>
+nmap <C-g>c :Gcommit<CR>
+nmap <C-g>d :Gdiff<CR>
