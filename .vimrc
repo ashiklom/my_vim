@@ -65,9 +65,9 @@ nnoremap <leader>ev :vsp ~/.vim/.vimrc<CR>
 nnoremap <leader>sv :source $MYVIMRC<CR>
 
 " Command-t shortcuts
-noremap <leader>o <Esc>:CommandT<CR>
-noremap <leader>O <Esc>:CommandTFlush<CR>
-noremap <leader>m <Esc>:CommandTBuffer<CR> 
+noremap <leader>to <Esc>:CommandT<CR>
+noremap <leader>tf <Esc>:CommandTFlush<CR>
+noremap <leader>tb <Esc>:CommandTBuffer<CR> 
 
 " Map <leader>cd to change working directory to file location
 nnoremap <leader>cd :cd %:p:h<CR>:pwd<CR>
@@ -94,6 +94,10 @@ nmap <F10> :SCCompileRun<cr>
 
 " Git
 nmap <leader>gs :Gstatus<CR>
+nmap <leader>gp :Gpush<CR>
+nmap <leader>gu :Gpull<CR>
 
-" LaTeX remap
+" LaTeX 
 imap <leader>j <Plug>IMAP_JumpForward
+set grepprg=grep\ -nH\ $*
+let g:tex_flavor='latex'
