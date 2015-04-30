@@ -93,6 +93,4 @@ nmap <F9> :SCCompile<CR>
 nmap <F10> :SCCompileRun<cr>
 
 " Git
-nmap <C-g>s :Gstatus<CR>
-nmap <C-g>c :Gcommit<CR>
-nmap <C-g>d :Gdiff<CR>
+nmap <leader>gs :Gstatus<CR>
