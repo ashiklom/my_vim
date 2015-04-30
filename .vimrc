@@ -94,3 +94,6 @@ nmap <F10> :SCCompileRun<cr>
 
 " Git
 nmap <leader>gs :Gstatus<CR>
+
+" LaTeX remap
+imap <leader>j <Plug>IMAP_JumpForward
