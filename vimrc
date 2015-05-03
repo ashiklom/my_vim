@@ -84,7 +84,7 @@ map <C-l> <C-w>l
 " Easy tab navigation
 nmap <leader>] :tabnext<CR>
 nmap <leader>[ :tabprevious<CR>
-nmap <leader>o :tabnew<CR>
+nmap <leader>= :tabnew<CR>
 
 " Easy buffer navigation
 nmap <C-n> :bnext<CR>
