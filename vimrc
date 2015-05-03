@@ -1,8 +1,8 @@
 " Plugins
 filetype off
-set rtp+=~/.vim/bundle/Vundle.vim
+set rtp+=~/.nvim/bundle/Vundle.vim
 call vundle#begin()
-source ~/.vim/pluglist.vim
+source ~/.nvim/pluglist.vim
 call vundle#end()
 filetype plugin indent on
 
@@ -59,17 +59,14 @@ vnoremap k gk
 "Select entire file
 nnoremap gv `[v`]
 
-"Fast save
-nnoremap <leader><ENTER> :w<CR>
-
 "VIMRC
-nnoremap <leader>ev :vsp ~/.vim/.vimrc<CR>
+nnoremap <leader>ev :vsp ~/.nvim/vimrc<CR>
 nnoremap <leader>sv :source $MYVIMRC<CR>
 
-" Command-t shortcuts
-noremap <leader>to <Esc>:CommandT<CR>
-noremap <leader>tf <Esc>:CommandTFlush<CR>
-noremap <leader>tb <Esc>:CommandTBuffer<CR> 
+" File browsing shortcuts
+noremap <leader>to <Esc>:CtrlP<CR>
+noremap <leader>th <Esc>:CtrlP ~<CR>
+noremap <leader>ee :Explore<CR>
 
 " Map <leader>cd to change working directory to file location
 nnoremap <leader>cd :cd %:p:h<CR>:pwd<CR>
@@ -104,7 +101,7 @@ nmap <leader>gp :Gpush<CR>
 nmap <leader>gu :Gpull<CR>
 
 " LaTeX 
-map <C-i> <Plug>IMAP_JumpForward
-imap <C-i> <Plug>IMAP_JumpForward
+map <leader>j <Plug>IMAP_JumpForward
+imap <C-j> <Plug>IMAP_JumpForward
 set grepprg=grep\ -nH\ $*
 let g:tex_flavor='latex'

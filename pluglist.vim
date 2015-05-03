@@ -2,7 +2,7 @@
 
 Plugin 'gmarik/Vundle.vim'          " Required for Vundle
 Plugin 'tpope/vim-fugitive'         " Great Git program!
-Plugin 'wincent/command-t'          " Makes opening files easy
+Plugin 'kien/ctrlp.vim'             " Fuzzy file matching
 Plugin 'davidhalter/jedi-vim'       " Python autocompletion
 Plugin 'junegunn/vim-easy-align'    " Macros for quick and easy alignment
 Plugin 'godlygeek/tabular'          " Another alignment package; Required by vim-markdown
