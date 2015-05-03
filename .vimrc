@@ -53,6 +53,8 @@ set foldmethod=indent	" fold based on indent level
 "Move based on visual lines 
 nnoremap j gj
 nnoremap k gk
+vnoremap j gj
+vnoremap k gk
 
 "Select entire file
 nnoremap gv `[v`]
@@ -84,6 +86,10 @@ nmap <leader>[ :tabprevious<CR>
 nmap <leader>w :tabnew<CR>
 nmap <leader>q :tabclose<CR>
 
+" Easy buffer navigation
+nmap <C-n> :bnext<CR>
+nmap <C-p> :bprevious<CR>
+
 " Easy indentation in insert mode
 imap <C-l> <C-t>
 imap <C-h> <C-d>
@@ -98,6 +104,7 @@ nmap <leader>gp :Gpush<CR>
 nmap <leader>gu :Gpull<CR>
 
 " LaTeX 
-imap <leader>j <Plug>IMAP_JumpForward
+map <C-i> <Plug>IMAP_JumpForward
+imap <C-i> <Plug>IMAP_JumpForward
 set grepprg=grep\ -nH\ $*
 let g:tex_flavor='latex'
