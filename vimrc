@@ -35,6 +35,10 @@ set backspace=2         " Fix backspace behavior
 
 nnoremap ; :
 
+" Quick save and exit
+nmap <leader>w :w<CR>
+nmap <leader>q :q<CR>
+
 " Highlight whitespace with <leader> l
 set listchars=tab:>.,trail:.,extends:#,nbsp:.
 nnoremap <leader>l :set list!<CR> 
@@ -80,8 +84,7 @@ map <C-l> <C-w>l
 " Easy tab navigation
 nmap <leader>] :tabnext<CR>
 nmap <leader>[ :tabprevious<CR>
-nmap <leader>w :tabnew<CR>
-nmap <leader>q :tabclose<CR>
+nmap <leader>o :tabnew<CR>
 
 " Easy buffer navigation
 nmap <C-n> :bnext<CR>
