@@ -108,3 +108,8 @@ map <leader>j <Plug>IMAP_JumpForward
 imap <C-j> <Plug>IMAP_JumpForward
 set grepprg=grep\ -nH\ $*
 let g:tex_flavor='latex'
+let g:Tex_DefaultFormat = 'pdf'
+let g:Tex_MultipleCompileFormats = 'pdf, aux'
+
+" Spelling
+nmap <leader>/ :set spell!<CR>
