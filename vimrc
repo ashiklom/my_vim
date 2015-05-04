@@ -8,7 +8,7 @@ filetype plugin indent on
 
 syntax enable
 
-colorscheme harlequin
+colorscheme ir_black
 
 set tabstop=8
 set softtabstop=4

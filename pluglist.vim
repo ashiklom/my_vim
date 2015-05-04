@@ -11,3 +11,6 @@ Plugin 'tpope/vim-surround'         " Easy surrounding
 Plugin 'jalvesaq/Nvim-R'            " Neovim R plugin
 Plugin 'zorab47/vim-gams'           " Gams syntax and formatting
 Plugin 'vim-latex/vim-latex'        " LaTex
+
+" Color schemes
+Plugin 'flazz/vim-colorschemes'     " Big library of vim color schemes!
