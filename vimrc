@@ -107,7 +107,7 @@ nmap <leader>gp :Gpush<CR>
 nmap <leader>gu :Gpull<CR>
 
 " LaTeX 
-map <leader>j <Plug>IMAP_JumpForward
+map <leader><enter> <Plug>IMAP_JumpForward
 imap <C-j> <Plug>IMAP_JumpForward
 set grepprg=grep\ -nH\ $*
 let g:tex_flavor='latex'
