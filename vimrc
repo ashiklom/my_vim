@@ -116,3 +116,6 @@ let g:Tex_MultipleCompileFormats = 'pdf, aux'
 
 " Spelling
 nmap <leader>/ :set spell!<CR>
+
+" Rescan syntax
+nmap <leader>00 :syntax sync fromstart<CR>
