@@ -119,3 +119,6 @@ nmap <leader>/ :set spell!<CR>
 
 " Rescan syntax
 nmap <leader>00 :syntax sync fromstart<CR>
+
+" Quick make
+nmap <leader>mk :!make<CR>
