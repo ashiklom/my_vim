@@ -94,6 +94,9 @@ nmap <C-p> :bprevious<CR>
 imap <C-l> <C-t>
 imap <C-h> <C-d>
 
+" Easy align 
+map <leader>ea :EasyAlign<CR>
+
 " SingleCompile
 nmap <F9> :SCCompile<CR>
 nmap <F10> :SCCompileRun<cr>
