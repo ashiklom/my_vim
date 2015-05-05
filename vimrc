@@ -67,10 +67,13 @@ nnoremap gv `[v`]
 nnoremap <leader>ev :vsp ~/.nvim/vimrc<CR>
 nnoremap <leader>sv :source $MYVIMRC<CR>
 
-" File browsing shortcuts
+" CtrlP (Fuzzy file search)
 noremap <leader>to <Esc>:CtrlP<CR>
 noremap <leader>th <Esc>:CtrlP ~<CR>
-noremap <leader>ee :Explore<CR>
+
+" NERDTree (File browse
+noremap <leader>ee :NERDTreeToggle<CR>
+noremap <leader>bb :Bookmark<CR>
 
 " Map <leader>cd to change working directory to file location
 nnoremap <leader>cd :cd %:p:h<CR>:pwd<CR>
