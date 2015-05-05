@@ -114,11 +114,13 @@ let g:tex_flavor='latex'
 let g:Tex_DefaultFormat = 'pdf'
 let g:Tex_MultipleCompileFormats = 'pdf, aux'
 
+" Quick make and view
+nmap <leader>mk :!make<CR>
+nmap <leader>vv :!evince *.pdf &<CR><CR>
+
 " Spelling
 nmap <leader>/ :set spell!<CR>
 
 " Rescan syntax
 nmap <leader>00 :syntax sync fromstart<CR>
 
-" Quick make
-nmap <leader>mk :!make<CR>
