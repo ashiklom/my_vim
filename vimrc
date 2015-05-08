@@ -35,6 +35,8 @@ set lazyredraw
 set showmatch		" show matching parentheses
 set backspace=2         " Fix backspace behavior
 
+set laststatus=2        " Status bar always on
+
 nnoremap ; :
 
 "" Highlight whitespace with <leader> l
