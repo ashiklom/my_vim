@@ -28,6 +28,8 @@ set undolevels=1000
 set nobackup
 set noswapfile
 
+set hidden              " Modified buffers in background
+
 set wildmenu 		" visual autocomplete for command menu
 set lazyredraw		
 set showmatch		" show matching parentheses
@@ -35,13 +37,9 @@ set backspace=2         " Fix backspace behavior
 
 nnoremap ; :
 
-" Quick save and exit
-nmap <leader>w :w<CR>
-nmap <leader>q :q<CR>
-
-" Highlight whitespace with <leader> l
-set listchars=tab:>.,trail:.,extends:#,nbsp:.
-nnoremap <leader>l :set list!<CR> 
+"" Highlight whitespace with <leader> l
+"set listchars=tab:>.,trail:.,extends:#,nbsp:.
+"nnoremap <leader>l :set list!<CR> 
 
 "Searching; clear search highlights with <leader> <space>
 set incsearch		" search as characters are entered
@@ -66,14 +64,24 @@ nnoremap gv `[v`]
 "VIMRC
 nnoremap <leader>ev :vsp ~/.nvim/vimrc<CR>
 nnoremap <leader>sv :source $MYVIMRC<CR>
+nnoremap <leader>ep :vsp ~/.nvim/pluglist.vim<CR>
 
-" CtrlP (Fuzzy file search)
-noremap <leader>to <Esc>:CtrlP<CR>
-noremap <leader>th <Esc>:CtrlP ~<CR>
-
-" NERDTree (File browse
+" NERDTree (File browse)
 noremap <leader>ee :NERDTreeToggle<CR>
-noremap <leader>bb :Bookmark<CR>
+"noremap <leader>bb :Bookmark<CR>
+
+" CtrlP (file and buffer fuzzy match)
+nmap <leader>bd :CtrlPBookmarkDir<CR>
+nmap <leader>bb :CtrlPBuffer<CR>
+nmap <leader>bm: CtrlPMRU<CR>
+
+" BufferGator (buffer management)
+let g:buffergator_suppress_keymaps = 1
+nmap <leader>jj :BuffergatorMruCyclePrev<CR>
+nmap <leader>kk :BuffergatorMruCycleNext<CR>
+nmap <leader>bl :BuffergatorOpen<CR>
+nmap <leader>q :bp <BAR> bd #<CR>
+nmap <leader>= :enew<CR>
 
 " Map <leader>cd to change working directory to file location
 nnoremap <leader>cd :cd %:p:h<CR>:pwd<CR>
@@ -83,15 +91,6 @@ map <C-h> <C-w>h
 map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
-
-" Easy tab navigation
-nmap <leader>] :tabnext<CR>
-nmap <leader>[ :tabprevious<CR>
-nmap <leader>= :tabnew<CR>
-
-" Easy buffer navigation
-nmap <C-n> :bnext<CR>
-nmap <C-p> :bprevious<CR>
 
 " Easy indentation in insert mode
 imap <C-l> <C-t>
@@ -127,3 +126,8 @@ nmap <leader>/ :set spell!<CR>
 " Rescan syntax
 nmap <leader>00 :syntax sync fromstart<CR>
 
+" Create new Evernote
+nmap <leader>1e :tabnew<CR>:e ~/Documents/geeknote/
+
+" Path shortcuts -- write
+nmap<leader>pwe :w ~/Documents/geeknote/

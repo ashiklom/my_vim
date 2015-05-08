@@ -1,7 +1,5 @@
 " Markdown file settings
-set wrap
-set linebreak
-set nolist
-set breakindent
-set showbreak=_____\  
+" Load common settings for text files 
+source ~/.nvim/ftplugin/txt.vim
 
+" Additional custom settings

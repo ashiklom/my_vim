@@ -1,3 +1,6 @@
-" Common settings for text files
-set textwidth=72
-set formatoptions=want
+" Common settings for all text files
+set wrap
+set linebreak
+set nolist
+set breakindent
+set showbreak=_____\  

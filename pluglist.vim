@@ -5,6 +5,8 @@ Plugin 'gmarik/Vundle.vim'          " Vundle itself! Required.
 Plugin 'tpope/vim-fugitive'         " Great Git program!
 Plugin 'kien/ctrlp.vim'             " Fuzzy file matching
 Plugin 'scrooloose/nerdtree'        " File browser
+Plugin 'bling/vim-airline'          " Nice status bar for buffers
+Plugin 'jeetsukumaran/vim-buffergator'  " Buffer management
 
 " Formatting
 Plugin 'junegunn/vim-easy-align'    " Macros for quick and easy alignment
@@ -18,6 +20,7 @@ Plugin 'jalvesaq/Nvim-R'            " Neovim R plugin
 Plugin 'zorab47/vim-gams'           " Gams syntax and formatting
 Plugin 'vim-latex/vim-latex'        " LaTex
 "Plugin 'neilagabriel/vim-geeknote'  " Geeknote plugin
+Plugin 'vimwiki/vimwiki'            " Vim Wiki - Awesome note-taking plugin!
 
 " Color schemes
 Plugin 'flazz/vim-colorschemes'     " Big library of vim color schemes!
