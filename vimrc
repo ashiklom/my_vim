@@ -61,7 +61,10 @@ vnoremap j gj
 vnoremap k gk
 
 "Select entire file
-nnoremap gv `[v`]
+nnoremap gv `[v`]$
+
+" Disable 'Ex' mode
+map Q <Nop>
 
 "VIMRC
 nnoremap <leader>ev :vsp ~/.nvim/vimrc<CR>
@@ -73,9 +76,10 @@ noremap <leader>ee :NERDTreeToggle<CR>
 "noremap <leader>bb :Bookmark<CR>
 
 " CtrlP (file and buffer fuzzy match)
+nmap <C-b> :CtrlPBuffer<CR>
 nmap <leader>bd :CtrlPBookmarkDir<CR>
-nmap <leader>bb :CtrlPBuffer<CR>
 nmap <leader>bm: CtrlPMRU<CR>
+set wildignore+=*.o,*.so
 
 " BufferGator (buffer management)
 let g:buffergator_suppress_keymaps = 1
@@ -133,3 +137,16 @@ nmap <leader>1e :tabnew<CR>:e ~/Documents/geeknote/
 
 " Path shortcuts -- write
 nmap<leader>pwe :w ~/Documents/geeknote/
+
+" Fortran free source
+let fortran_free_source = 1
+
+" Syntastic
+"set statusline+=%#warningmsg#
+"set statusline+=%{SyntasticStatuslineFlag()}
+"set statusline+=%*
+
+"let g:syntastic_always_populate_loc_list = 1
+"let g:syntastic_auto_loc_list = 1
+"let g:syntastic_check_on_open = 1
+"let g:syntastic_check_on_wq = 0
