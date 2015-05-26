@@ -1,8 +1,13 @@
 " Plugins
 filetype off
-set rtp+=~/.nvim/bundle/Vundle.vim
+set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
-source ~/.nvim/pluglist.vim
+source ~/.vim/pluglist.vim
+if has('nvim')
+    source ~/.vim/pluglist.n.vim
+else 
+    source ~/.vim/pluglist.v.vim
+end
 call vundle#end()
 filetype plugin indent on
 
@@ -27,6 +32,7 @@ set undolevels=1000
 
 set nobackup
 set noswapfile
+set autoread        " Automatically reload externally edited file
 
 set hidden              " Modified buffers in background
 
@@ -36,6 +42,8 @@ set showmatch		" show matching parentheses
 set backspace=2         " Fix backspace behavior
 
 set laststatus=2        " Status bar always on
+
+set shell=/bin/zsh      " Set zsh to default shell
 
 nnoremap ; :
 
@@ -67,9 +75,9 @@ nnoremap gv `[v`]$
 map Q <Nop>
 
 "VIMRC
-nnoremap <leader>ev :vsp ~/.nvim/vimrc<CR>
+nnoremap <leader>ev :vsp ~/.vim/vimrc<CR>
 nnoremap <leader>sv :source $MYVIMRC<CR>
-nnoremap <leader>ep :vsp ~/.nvim/pluglist.vim<CR>
+nnoremap <leader>ep :vsp ~/.vim/pluglist.vim<CR>
 
 " NERDTree (File browse)
 noremap <leader>ee :NERDTreeToggle<CR>
@@ -146,6 +154,9 @@ nmap <leader>tt :set wrap linebreak nolist breakindent showbreak=____\<CR>
 nmap <leader>tT :set nowrap nolinebreak nobreakindent <CR>
 nmap <leader>tc :set tw=70 formatoptions=cro<CR>
 nmap <leader>tC :set tw=0<CR>
+
+" Quickly check Fortran syntax
+nmap <leader>fc :!gfortran % -fsyntax-only<CR>
 
 " Syntastic
 "set statusline+=%#warningmsg#

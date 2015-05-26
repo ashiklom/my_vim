@@ -1,3 +1,6 @@
+" Plugins for Vim only
+Plugin 'vim-scripts/Vim-R-plugin'
+
 " Loads plugins using Vundle
 Plugin 'gmarik/Vundle.vim'          " Vundle itself! Required.
 
@@ -18,6 +21,7 @@ Plugin 'scrooloose/nerdcommenter'   " Easier commenting
 " Filetype-specific
 Plugin 'plasticboy/vim-markdown'    " Markdown syntax and features
 Plugin 'davidhalter/jedi-vim'       " Python autocompletion
+Plugin 'jalvesaq/Nvim-R'            " Neovim R plugin
 Plugin 'zorab47/vim-gams'           " Gams syntax and formatting
 Plugin 'vim-latex/vim-latex'        " LaTex
 Plugin 'neilagabriel/vim-geeknote'  " Geeknote plugin
