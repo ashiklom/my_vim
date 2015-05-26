@@ -60,7 +60,7 @@ nnoremap <leader><space> :nohlsearch<cr>
 set foldenable
 set foldlevelstart=10
 set foldnestmax=10
-set foldmethod=indent	" fold based on indent level
+set foldmethod=manual	
 
 "Move based on visual lines 
 nnoremap j gj
