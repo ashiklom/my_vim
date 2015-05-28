@@ -3,3 +3,4 @@
 source ~/.nvim/ftplugin/txt.vim
 
 " Additional custom settings
+imap <C-h> ========

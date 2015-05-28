@@ -27,6 +27,7 @@ Plugin 'chrisbra/csv.vim'           " For working with CSV's
 
 " Other
 Plugin 'Lokaltog/vim-easymotion'    " Easier motions within files
+Plugin 'christoomey/vim-tmux-navigator' " Easy tmux navigation
 
 " Color schemes
 Plugin 'flazz/vim-colorschemes'     " Big library of vim color schemes!

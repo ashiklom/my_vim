@@ -45,6 +45,9 @@ set laststatus=2        " Status bar always on
 
 set shell=/bin/zsh      " Set zsh to default shell
 
+set splitbelow
+set splitright
+
 nnoremap ; :
 
 "" Highlight whitespace with <leader> l
