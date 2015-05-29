@@ -20,7 +20,6 @@ Plugin 'plasticboy/vim-markdown'    " Markdown syntax and features
 Plugin 'davidhalter/jedi-vim'       " Python autocompletion
 Plugin 'zorab47/vim-gams'           " Gams syntax and formatting
 Plugin 'vim-latex/vim-latex'        " LaTex
-Plugin 'neilagabriel/vim-geeknote'  " Geeknote plugin
 Plugin 'vimwiki/vimwiki'            " Vim Wiki - Awesome note-taking plugin!
 Plugin 'chrisbra/csv.vim'           " For working with CSV's
 "Plugin 'scrooloose/syntastic'       " Syntax checking
