@@ -1,4 +1,4 @@
-" Plugins
+" Enable Vundle plugins
 filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -15,23 +15,28 @@ syntax enable
 
 colorscheme ir_black
 
+" Tabs and indenting
 set tabstop=8
 set softtabstop=4
 set shiftwidth=4    " size of an indent
-set expandtab		" tabs are spaces
+set expandtab       " tabs are spaces
 set smarttab
 set shiftround      " use multiple of shiftwidth when indenting with <or >
 set autoindent
 set copyindent      " copy previous indentation on autoindenting
 set nowrap          " no wrapping
 
-set number 		" line numbers
-set showcmd		" show command in bottom bar
-set cursorline		" highlight current line
-set undolevels=1000
+set number          " line numbers
+set showcmd         " show command in bottom bar
+set cursorline      " highlight current line
 
 set nobackup
 set noswapfile
+
+set undodir=~/.vim/undodir  " Directory for persistent undo
+set undofile
+set undolevels=1000 " Maximum number of changes that can be undone
+set undoreload=1000 " Max number of lines to save for undo
 set autoread        " Automatically reload externally edited file
 
 set hidden              " Modified buffers in background
@@ -50,20 +55,19 @@ set splitright
 
 nnoremap ; :
 
-"" Highlight whitespace with <leader> l
-"set listchars=tab:>.,trail:.,extends:#,nbsp:.
-"nnoremap <leader>l :set list!<CR> 
-
 "Searching; clear search highlights with <leader> <space>
 set incsearch		" search as characters are entered
 set hlsearch		" highlight matches
 nnoremap <leader><space> :nohlsearch<cr>
 
 "Folding
+"[--
 set foldenable
 set foldlevelstart=10
 set foldnestmax=10
-set foldmethod=manual	
+set foldmethod=marker
+set foldmarker=[--,--]
+"--]
 
 "Move based on visual lines 
 nnoremap j gj
@@ -84,7 +88,6 @@ nnoremap <leader>ep :vsp ~/.vim/pluglist.vim<CR>
 
 " NERDTree (File browse)
 noremap <leader>ee :NERDTreeToggle<CR>
-"noremap <leader>bb :Bookmark<CR>
 
 " CtrlP (file and buffer fuzzy match)
 nmap <C-b> :CtrlPBuffer<CR>
@@ -94,8 +97,8 @@ set wildignore+=*.o,*.so
 
 " BufferGator (buffer management)
 let g:buffergator_suppress_keymaps = 1
-nmap <leader>jj :BuffergatorMruCyclePrev<CR>
-nmap <leader>kk :BuffergatorMruCycleNext<CR>
+nmap <leader>kk :BuffergatorMruCyclePrev<CR>
+nmap <leader>jj :BuffergatorMruCycleNext<CR>
 nmap <leader>bl :BuffergatorOpen<CR>
 nmap <leader>q :bp <BAR> bd #<CR>
 nmap <leader>= :enew<CR>
@@ -115,10 +118,7 @@ imap <C-h> <C-d>
 
 " Easy align 
 map <leader>ea :EasyAlign<CR>
-
-" SingleCompile
-nmap <F9> :SCCompile<CR>
-nmap <F10> :SCCompileRun<cr>
+map <leader>et :Tabularize /
 
 " Git
 nmap <leader>gs :Gstatus<CR>
@@ -143,14 +143,10 @@ nmap <leader>/ :set spell!<CR>
 " Rescan syntax
 nmap <leader>00 :syntax sync fromstart<CR>
 
-" Create new Evernote
-nmap <leader>1e :tabnew<CR>:e ~/Documents/geeknote/
-
-" Path shortcuts -- write
-nmap<leader>pwe :w ~/Documents/geeknote/
-
-" Fortran free source
-let fortran_free_source = 1
+" Fortran
+let fortran_free_source = 1     " Free source
+nmap <leader>fc :!gfortran % -fsyntax-only<CR>
+" ^^ Check syntax
 
 " Quickly apply settings for text files
 nmap <leader>tt :set wrap linebreak nolist breakindent showbreak=____\<CR>
@@ -158,15 +154,7 @@ nmap <leader>tT :set nowrap nolinebreak nobreakindent <CR>
 nmap <leader>tc :set tw=70 formatoptions=cro<CR>
 nmap <leader>tC :set tw=0<CR>
 
-" Quickly check Fortran syntax
-nmap <leader>fc :!gfortran % -fsyntax-only<CR>
-
-" Syntastic
-"set statusline+=%#warningmsg#
-"set statusline+=%{SyntasticStatuslineFlag()}
-"set statusline+=%*
-
-"let g:syntastic_always_populate_loc_list = 1
-"let g:syntastic_auto_loc_list = 1
-"let g:syntastic_check_on_open = 1
-"let g:syntastic_check_on_wq = 0
+" Geeknote
+nmap <leader>nn :GeeknoteCreateNote
+nmap <leader>ns :GeeknoteSync<CR>
+nmap <leader>nw :GeeknoteSaveAsNote<CR>
