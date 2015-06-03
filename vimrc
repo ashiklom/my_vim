@@ -143,16 +143,11 @@ nmap <leader>/ :set spell!<CR>
 " Rescan syntax
 nmap <leader>00 :syntax sync fromstart<CR>
 
-" Fortran
-let fortran_free_source = 1     " Free source
-nmap <leader>fc :!gfortran % -fsyntax-only<CR>
-" ^^ Check syntax
-
 " Quickly apply settings for text files
-nmap <leader>tt :set wrap linebreak nolist breakindent showbreak=____\<CR>
-nmap <leader>tT :set nowrap nolinebreak nobreakindent <CR>
-nmap <leader>tc :set tw=70 formatoptions=cro<CR>
-nmap <leader>tC :set tw=0<CR>
+nmap <leader>pt :PencilToggle<CR>
+nmap <leader>po :PencilOff<CR>
+nmap <leader>ps :PencilSoft<CR>
+nmap <leader>ph :PencilHard<CR>
 
 " Geeknote
 nmap <leader>nn :GeeknoteCreateNote
