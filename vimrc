@@ -50,9 +50,6 @@ set laststatus=2        " Status bar always on
 
 set shell=/bin/zsh      " Set zsh to default shell
 
-set splitbelow
-set splitright
-
 nnoremap ; :
 
 "Searching; clear search highlights with <leader> <space>
@@ -102,6 +99,8 @@ nmap <leader>jj :BuffergatorMruCycleNext<CR>
 nmap <leader>bl :BuffergatorOpen<CR>
 nmap <leader>q :bp <BAR> bd #<CR>
 nmap <leader>= :enew<CR>
+nmap <Up> :bp<CR>
+nmap <Down> :bn<CR>
 
 " Map <leader>cd to change working directory to file location
 nnoremap <leader>cd :cd %:p:h<CR>:pwd<CR>
