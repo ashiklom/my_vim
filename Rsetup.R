@@ -1,5 +1,5 @@
 ## Install dependencies for Nvim R package
-install.packges("devtools", "setwidth")
+install.packages("devtools", "setwidth")
 library(devtools)
 install_github('jalvesaq/nvimcom')
 download.file("http://www.lepem.ufc.br/jaa/vimr/colorout_1.1-0.tar.gz", destfile = "colorout_1.1-0.tar.gz")
