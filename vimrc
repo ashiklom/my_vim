@@ -52,19 +52,30 @@ set shell=/bin/zsh      " Set zsh to default shell
 
 nnoremap ; :
 
+" Remap <leader> key
+let mapleader = ","
+let maplocalleader = "\\"
+
 "Searching; clear search highlights with <leader> <space>
 set incsearch		" search as characters are entered
 set hlsearch		" highlight matches
 nnoremap <leader><space> :nohlsearch<cr>
 
 "Folding
-"[--
 set foldenable
 set foldlevelstart=10
 set foldnestmax=10
 set foldmethod=marker
 set foldmarker=[--,--]
-"--]
+
+" Mappings for folds
+nmap <leader>fo O[--<ESC>\ccj
+nmap <leader>fc o[--<ESC>\ccj
+nmap <leader>fd ?"[--$<CR>dd/"--]$<CR>dd2<C-o>
+
+" Define custom surround 'f' for fold marker
+let cmt = split(&commentstring, '%s', 1)
+let g:surround_102 = get(cmt, 0, '')."[--\r".get(cmt, 0, '')."--]"
 
 "Move based on visual lines 
 nnoremap j gj
@@ -87,15 +98,13 @@ nnoremap <leader>ep :vsp ~/.vim/pluglist.vim<CR>
 noremap <leader>ee :NERDTreeToggle<CR>
 
 " CtrlP (file and buffer fuzzy match)
-nmap <C-b> :CtrlPBuffer<CR>
+nmap <leader>bb :CtrlPBuffer<CR>
 nmap <leader>bd :CtrlPBookmarkDir<CR>
 nmap <leader>bm: CtrlPMRU<CR>
 set wildignore+=*.o,*.so
 
 " BufferGator (buffer management)
 let g:buffergator_suppress_keymaps = 1
-nmap <leader>kk :BuffergatorMruCyclePrev<CR>
-nmap <leader>jj :BuffergatorMruCycleNext<CR>
 nmap <leader>bl :BuffergatorOpen<CR>
 nmap <leader>q :bp <BAR> bd #<CR>
 nmap <leader>= :enew<CR>
