@@ -15,6 +15,9 @@ syntax enable
 
 colorscheme ir_black
 
+" File specific settings (modelines)
+set modeline
+
 " Tabs and indenting
 set tabstop=8
 set softtabstop=4
@@ -108,8 +111,8 @@ let g:buffergator_suppress_keymaps = 1
 nmap <leader>bl :BuffergatorOpen<CR>
 nmap <leader>q :bp <BAR> bd #<CR>
 nmap <leader>= :enew<CR>
-nmap <Up> :bp<CR>
-nmap <Down> :bn<CR>
+nmap <leader>k :bp<CR>
+nmap <leader>j :bn<CR>
 
 " Map <leader>cd to change working directory to file location
 nnoremap <leader>cd :cd %:p:h<CR>:pwd<CR>
