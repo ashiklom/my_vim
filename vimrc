@@ -66,16 +66,6 @@ set foldenable
 set foldlevelstart=10
 set foldnestmax=10
 set foldmethod=marker
-set foldmarker=[--,--]
-
-" Mappings for folds
-nmap <leader>fo O[--<ESC>\ccj
-nmap <leader>fc o[--<ESC>\ccj
-nmap <leader>fd ?"[--$<CR>dd/"--]$<CR>dd2<C-o>
-
-" Define custom surround 'f' for fold marker
-let cmt = split(&commentstring, '%s', 1)
-let g:surround_102 = get(cmt, 0, '')."[--\r".get(cmt, 0, '')."--]"
 
 "Move based on visual lines 
 nnoremap j gj
