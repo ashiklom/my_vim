@@ -17,7 +17,6 @@ Plugin 'scrooloose/nerdcommenter'   " Easier commenting
 Plugin 'reedes/vim-pencil'          " Easier hard/soft wrap switching
 
 " Filetype-specific
-Plugin 'plasticboy/vim-markdown'    " Markdown syntax and features
 Plugin 'davidhalter/jedi-vim'       " Python autocompletion
 Plugin 'zorab47/vim-gams'           " Gams syntax and formatting
 Plugin 'vim-latex/vim-latex'        " LaTex
