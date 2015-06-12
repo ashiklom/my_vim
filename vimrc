@@ -55,6 +55,14 @@ set shell=/bin/zsh      " Set zsh to default shell
 
 nnoremap ; :
 
+" Airline configuration
+let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_section_x = '%{PencilMode()}'
+let g:airline_section_y = '%y'
+"let g:pencil#mode_indicators = {'soft' : 's'}
+
+
 " Remap <leader> key
 let mapleader = ","
 let maplocalleader = "\\"
@@ -145,10 +153,11 @@ nmap <leader>/ :set spell!<CR>
 nmap <leader>00 :syntax sync fromstart<CR>
 
 " Quickly apply settings for text files
-nmap <leader>pt :PencilToggle<CR>
+nmap <leader>pp :PencilToggle<CR>
 nmap <leader>po :PencilOff<CR>
 nmap <leader>ps :PencilSoft<CR>
 nmap <leader>ph :PencilHard<CR>
+nmap <leader>pa :PFormatToggle<CR>
 
 " Geeknote
 nmap <leader>nn :GeeknoteCreateNote
