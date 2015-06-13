@@ -99,9 +99,10 @@ nnoremap <leader>ep :vsp ~/.vim/pluglist.vim<CR>
 noremap <leader>ee :NERDTreeToggle<CR>
 
 " CtrlP (file and buffer fuzzy match)
-nmap <leader>bb :CtrlPBuffer<CR>
-nmap <leader>bd :CtrlPBookmarkDir<CR>
-nmap <leader>bm: CtrlPMRU<CR>
+nmap <leader>b :CtrlPBuffer<CR>
+nmap <leader>t :CtrlP<CR>
+nmap <leader>d :CtrlPBookmarkDir<CR>
+nmap <leader>o :CtrlPMRU<CR>
 set wildignore+=*.o,*.so
 
 " BufferGator (buffer management)
