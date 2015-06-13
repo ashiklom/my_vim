@@ -107,9 +107,8 @@ set wildignore+=*.o,*.so
 
 " BufferGator (buffer management)
 let g:buffergator_suppress_keymaps = 1
-nmap <leader>bl :BuffergatorOpen<CR>
+nmap <leader>l :BuffergatorOpen<CR>
 nmap <leader>q :bp <BAR> bd #<CR>
-nmap <leader>= :enew<CR>
 nmap <leader>k :bp<CR>
 nmap <leader>j :bn<CR>
 
