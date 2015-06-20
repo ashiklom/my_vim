@@ -1,5 +1,5 @@
 " RC file for GUI vim -- mostly for GeekNote
 
 colorscheme molokai
-set guifont=Inconsolata\ Medium\ 15
+set guifont=Inconsolata\ Medium\ 10
 

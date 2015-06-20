@@ -1,23 +1,18 @@
 " Core (neo)vim configuration
 " Author: Alexey Shiklomanov
-" Plugins, via vundle {{{
-filetype off
-set runtimepath+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-source ~/.vim/pluglist.vim
-if has('nvim')
-    source ~/.vim/pluglist.n.vim
-else 
-    source ~/.vim/pluglist.v.vim
-end
-call vundle#end()
-filetype plugin indent on
 
+" Plugins, via vim-plug {{{
+call plug#begin('~/.vim/bundle')
+source ~/.vim/pluglist.vim
+call plug#end()
+filetype plugin indent on
 syntax enable
 " }}}
 " Options (see :options) {{{
 " 2 Moving around, searching and patterns {{{
 set incsearch		" search as characters are entered
+set ignorecase          " Ignore case in search
+set smartcase           " Only ignore case if all lowercase
 " }}}
 " 4 Displaying text {{{
 set nowrap          " no wrapping
@@ -38,10 +33,11 @@ set hidden              " Modified buffers in background
 set showcmd         " show command in bottom bar
 " }}}
 " 13 Editing text {{{
-set undolevels=1000 " Maximum number of changes that can be undone
-set undoreload=1000 " Max number of lines to save for undo
-set backspace=2         " Fix backspace behavior
-set noshowmatch       " do not show matching parentheses
+set undolevels=1000      " Maximum number of changes that can be undone
+set undoreload=1000      " Max number of lines to save for undo
+set backspace=2          " Fix backspace behavior
+set noshowmatch          " do not show matching parentheses
+set formatoptions=qwnj   " No autoformatting by default
 " }}}
 " 14 Tabs and indenting {{{
 set tabstop=8
@@ -80,7 +76,9 @@ set undodir=~/.vim/undodir  " Directory for persistent undo
 set shell=/bin/zsh      " Set zsh to default shell
 " }}}
 " }}}
-
+" Load user-defined functions {{{
+source ~/.vim/customfunctions.vim
+" }}}
 " Mappings {{{
 " Vanilla {{{
 let mapleader = ","
@@ -133,6 +131,11 @@ nnoremap <leader>/ :set spell!<CR>
 
 " Change word to uppercase in insert mode
 inoremap <c-u> <ESC>viwUea
+
+" Quickly change to prose style
+nnoremap <leader>pp :call ToggleHard()<CR>
+inoremap <c-p> <ESC>:call ToggleHard()<CR>a
+nnoremap <leader>ps :set wrap!
 " -vanilla }}}
 " Plugins {{{
 " NERDTree (File browse)
@@ -151,39 +154,23 @@ nnoremap <leader>q :bp <BAR> bd #<CR>
 nnoremap <leader>k :bp<CR>
 nnoremap <leader>j :bn<CR>
 
-
 " Easy align 
-map <leader>ea :EasyAlign<CR>
-map <leader>et :Tabularize /
+map <leader>ea :Tabularize /
+map <leader>et :Tabularize //l3c1l0<left><left><left><left><left><left><left>
 
 " Git
 nnoremap <leader>gs :Gstatus<CR>
 nnoremap <leader>gp :Gpush<CR>
 nnoremap <leader>gu :Gpull<CR>
-
-" Quickly apply settings for text files
-nnoremap <leader>pp :PencilToggle<CR>
-nnoremap <leader>po :PencilOff<CR>
-nnoremap <leader>ps :PencilSoft<CR>
-nnoremap <leader>ph :PencilHard<CR>
-nnoremap <leader>pa :PFormatToggle<CR>
-
-" Geeknote
-nnoremap <leader>nn :GeeknoteCreateNote
-nnoremap <leader>ns :GeeknoteSync<CR>
-nnoremap <leader>nw :GeeknoteSaveAsNote<CR>
 " -plugins }}}
 " -mappings }}}
-
 " Aesthetics {{{
 colorscheme ir_black
 
 " Airline configuration
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
-let g:airline_section_x = '%{PencilMode()}'
+let g:airline_section_x = '%{ShowHard()}'
 let g:airline_section_y = '%y'
-"let g:pencil#mode_indicators = {'soft' : 's'}
 " }}}
-
 " vim: set foldlevel=0 :
