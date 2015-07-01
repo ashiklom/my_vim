@@ -90,12 +90,6 @@ nnoremap <Backspace> ,
 nnoremap S :w!<CR>
 inoremap jk <ESC>
 
-" Finger training!
-inoremap <ESC> <nop>
-vnoremap <ESC> <nop>
-xnoremap <ESC> <nop>
-cnoremap <ESC> <nop>
-
 " Disable 'Ex' mode
 map Q <Nop>
 
