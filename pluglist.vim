@@ -11,6 +11,7 @@ Plug 'benekastah/neomake'
 Plug 'godlygeek/tabular'                  " Another alignment package; Required by vim-markdown
 Plug 'tpope/vim-surround'                 " Easy surrounding
 Plug 'scrooloose/nerdcommenter'           " Easier commenting
+Plug 'clarke/vim-renumber'                " Automatically renumber list
 
 " Filetype-specific
 Plug 'davidhalter/jedi-vim'               " Python autocompletion

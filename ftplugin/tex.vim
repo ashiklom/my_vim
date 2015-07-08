@@ -16,6 +16,6 @@ let g:Tex_DefaultFormat = 'pdf'
 let g:Tex_MultipleCompileFormats = 'pdf, aux'
 
 " Quick make and view
-nnoremap <leader>mk :!make<CR>
-nnoremap <leader>vv :!evince *.pdf &<CR><CR>
+nnoremap <leader>mk :make
+nnoremap <leader>vv :!gnome-open *.pdf &<CR><CR>
 
