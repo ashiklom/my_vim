@@ -156,6 +156,14 @@ map <leader>et :Tabularize //l3c1l0<left><left><left><left><left><left><left>
 nnoremap <leader>gs :Gstatus<CR>
 nnoremap <leader>gp :Gpush<CR>
 nnoremap <leader>gu :Gpull<CR>
+
+" Vim outliner
+map <localleader>k <Plug>VO_FollowLink
+map <localleader>n <Plug>VO_JumpBack
+
+" LaTeX
+map <localleader><enter> <Plug>IMAP_JumpForward
+imap <C-j> <Plug>IMAP_JumpForward
 " -plugins }}}
 " -mappings }}}
 " Aesthetics {{{

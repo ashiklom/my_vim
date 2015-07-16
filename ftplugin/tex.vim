@@ -8,8 +8,6 @@ set sw=2
 set iskeyword+=:
 
 " LaTeX 
-map <localleader><enter> <Plug>IMAP_JumpForward
-imap <C-j> <Plug>IMAP_JumpForward
 set grepprg=grep\ -nH\ $*
 let g:tex_flavor='latex'
 let g:Tex_DefaultFormat = 'pdf'
