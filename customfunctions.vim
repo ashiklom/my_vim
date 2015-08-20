@@ -33,3 +33,13 @@ function! ShowHard()
         return "None"
     endif
 endfunction
+
+function! Prose()
+    set wrap linebreak breakindent
+    echom 'Enabled soft wrapping'
+endfunction
+
+function! Code()
+    set nowrap nolinebreak nobreakindent
+    echom 'Disabled soft wrapping'
+endfunction
