@@ -145,10 +145,10 @@ nnoremap <leader>o :CtrlPMRU<CR>
 let g:buffergator_suppress_keymaps = 1
 nnoremap <leader>l :BuffergatorOpen<CR>
 nnoremap <leader>q :bp <BAR> bd #<CR>
-nnoremap <up> :bp<CR>
-nnoremap <down> :bn<CR>
-nnoremap <right> :tabnext<CR>
-nnoremap <left> :tabprevious<CR>
+nnoremap <left> :bp<CR>
+nnoremap <right> :bn<CR>
+nnoremap <up> :tabprevious<CR>
+nnoremap <down> :tabnext<CR>
 
 " Easy align 
 map <leader>ea :Tabularize /
