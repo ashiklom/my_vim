@@ -166,6 +166,10 @@ map <localleader>n <Plug>VO_JumpBack
 " LaTeX
 map <localleader><enter> <Plug>IMAP_JumpForward
 imap <C-j> <Plug>IMAP_JumpForward
+
+" YouCompleteMe
+"let g:ycm_key_invoke_completion = '<tab>'
+"let g:ycm_auto_trigger = 0
 " -plugins }}}
 " -mappings }}}
 " Aesthetics {{{

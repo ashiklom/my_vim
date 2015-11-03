@@ -22,9 +22,11 @@ Plug 'vimwiki/vimwiki'                    " Vim Wiki - Awesome note-taking plugi
 Plug 'chrisbra/csv.vim'                   " For working with CSV's
 Plug 'tmux-plugins/vim-tmux'              " For tmux conf file
 "Plug 'scrooloose/syntastic'              " Syntax checking
+Plug 'ivanov/vim-ipython'
 
 " Other
 Plug 'Lokaltog/vim-easymotion'            " Easier motions within files
+"Plug 'Valloric/YouCompleteMe'             " Better code completion
 "Plug 'christoomey/vim-tmux-navigator'    " Easy tmux navigation
 
 " Color schemes
