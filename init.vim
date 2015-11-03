@@ -2,8 +2,8 @@
 " Author: Alexey Shiklomanov
 
 " Plugins, via vim-plug {{{
-call plug#begin('~/.vim/bundle')
-source ~/.vim/pluglist.vim
+call plug#begin('bundle')
+source pluglist.vim
 call plug#end()
 filetype plugin indent on
 syntax enable
@@ -77,7 +77,7 @@ set shell=/bin/zsh      " Set zsh to default shell
 " }}}
 " }}}
 " Load user-defined functions {{{
-source ~/.vim/customfunctions.vim
+source customfunctions.vim
 " }}}
 " Mappings {{{
 " Vanilla {{{
