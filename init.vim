@@ -2,7 +2,7 @@
 " Author: Alexey Shiklomanov
 
 " Plugins, via vim-plug {{{
-call plug#begin('bundle')
+call plug#begin('~/.config/nvim/bundle')
 " File management
 Plug 'tpope/vim-fugitive'                 " Great Git program!
 Plug 'kien/ctrlp.vim'                     " Fuzzy file matching
@@ -116,7 +116,7 @@ set shell=/bin/zsh      " Set zsh to default shell
 " }}}
 " }}}
 " Load user-defined functions {{{
-source customfunctions.vim
+source ~/.config/nvim/customfunctions.vim
 " }}}
 " Mappings {{{
 " Vanilla {{{
