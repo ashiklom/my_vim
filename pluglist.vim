@@ -20,7 +20,6 @@ Plug 'vim-latex/vim-latex'                " LaTex
 Plug 'vimwiki/vimwiki'                    " Vim Wiki - Awesome note-taking plugin!
 Plug 'chrisbra/csv.vim'                   " For working with CSV's
 Plug 'tmux-plugins/vim-tmux'              " For tmux conf file
-Plug 'jalvesaq/Nvim-R'                    " Neovim R plugin
 "Plug 'scrooloose/syntastic'              " Syntax checking
 
 " Other
@@ -30,3 +29,9 @@ Plug 'Lokaltog/vim-easymotion'            " Easier motions within files
 " Color schemes
 Plug 'flazz/vim-colorschemes'             " Big library of vim color schemes!
 
+" Vim/Nvim
+if has('nvim') 
+    Plug 'jalvesaq/Nvim-R'                    " Neovim R plugin
+else 
+    Plug 'vim-scripts/vim-r-plugin'
+end
