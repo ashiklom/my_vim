@@ -2,7 +2,7 @@
 " Author: Alexey Shiklomanov
 
 " Plugins, via vim-plug {{{
-call plug#begin('bundle')
+call plug#begin('~/.config/nvim/bundle')
 " File management
 Plug 'tpope/vim-fugitive'                 " Great Git program!
 Plug 'kien/ctrlp.vim'                     " Fuzzy file matching
@@ -31,6 +31,7 @@ Plug 'ivanov/vim-ipython'
 
 " Other
 Plug 'Lokaltog/vim-easymotion'            " Easier motions within files
+"Plug 'reedes/vim-pencil'                 " Easy formatting for prose in vim
 "Plug 'Valloric/YouCompleteMe'             " Better code completion
 "Plug 'christoomey/vim-tmux-navigator'    " Easy tmux navigation
 
@@ -54,7 +55,8 @@ set ignorecase          " Ignore case in search
 set smartcase           " Only ignore case if all lowercase
 " }}}
 " 4 Displaying text {{{
-set nowrap          " no wrapping
+set wrap            " allow soft wrapping
+set linebreak       " Break lines at logical places
 set lazyredraw      " don't withdraw while executing macros
 set nolist          " display certain characters
 set listchars=tab:>-    " String for displaying tabs
@@ -109,14 +111,14 @@ set noswapfile
 set wildignore+=*.o,*.so
 set wildmenu        " visual autocomplete for command menu
 set undofile
-set undodir=~/.vim/undodir  " Directory for persistent undo
+set undodir=~/.config/nvim/undodir  " Directory for persistent undo
 " }}}
 " 21 Executing external commands {{{
 set shell=/bin/zsh      " Set zsh to default shell
 " }}}
 " }}}
 " Load user-defined functions {{{
-source customfunctions.vim
+source ~/.config/nvim/customfunctions.vim
 " }}}
 " Mappings {{{
 " Vanilla {{{
