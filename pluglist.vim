@@ -29,9 +29,6 @@ Plug 'Lokaltog/vim-easymotion'            " Easier motions within files
 " Color schemes
 Plug 'flazz/vim-colorschemes'             " Big library of vim color schemes!
 
-" Vim/Nvim
-if has('nvim') 
-    Plug 'jalvesaq/Nvim-R'                    " Neovim R plugin
-else 
-    Plug 'vim-scripts/vim-r-plugin'
-end
+" Vim R plugin
+Plug 'jalvesaq/R-Vim-runtime'
+Plug 'vim-scripts/Vim-R-Plugin'
