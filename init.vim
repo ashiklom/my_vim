@@ -217,7 +217,7 @@ let R_rconsole_width = 80
 " -plugins }}}
 " -mappings }}}
 " Aesthetics {{{
-colorscheme holokai
+colorscheme molokai
 
 " Airline configuration
 let g:airline_powerline_fonts = 1
