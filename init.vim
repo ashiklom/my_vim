@@ -210,6 +210,23 @@ imap <C-j> <Plug>IMAP_JumpForward
 " Vim-R plugin
 let R_vsplit = 1
 let R_rconsole_width = 80
+let R_nvimpager = "tab"
+
+" Neovim terminal
+autocmd BufWinEnter,WinEnter term://* startinsert
+autocmd BufLeave term://* stopinsert
+
+tnoremap <C-h> <C-\><C-n><C-w>h
+tnoremap <C-S-l> <C-\><C-n><C-w>l
+tnoremap <C-j> <C-\><C-n><C-w>j
+tnoremap <C-S-k> <C-\><C-n><C-w>k
+
+tnoremap <C-l> <ESC>ddiclear<CR><ESC>i
+
+tnoremap jk <ESC>
+tnoremap <ESC> <C-\><C-n>
+tnoremap <left> <C-\><C-n>:bp<CR>
+tnoremap <right> <C-\><C-n>:bn<CR>
 
 " YouCompleteMe
 "let g:ycm_key_invoke_completion = '<tab>'
