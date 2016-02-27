@@ -10,24 +10,24 @@ Plug 'scrooloose/nerdtree'                " File browser
 Plug 'bling/vim-airline'                  " Nice status bar for buffers
 Plug 'jeetsukumaran/vim-buffergator'      " Buffer management
 Plug 'danro/rename.vim'                   " Rename current file
-Plug 'benekastah/neomake'
+Plug 'benekastah/neomake'                 " Asynchronous make through neovim
 
 " Formatting
 Plug 'godlygeek/tabular'                  " Another alignment package; Required by vim-markdown
 Plug 'tpope/vim-surround'                 " Easy surrounding
 Plug 'scrooloose/nerdcommenter'           " Easier commenting
 Plug 'clarke/vim-renumber'                " Automatically renumber list
-Plug 'ashiklom/vimoutliner'
+"Plug 'ashiklom/vimoutliner'
 
 " Filetype-specific
-Plug 'davidhalter/jedi-vim'               " Python autocompletion
-Plug 'zorab47/vim-gams'                   " Gams syntax and formatting
+"Plug 'davidhalter/jedi-vim'               " Python autocompletion
+"Plug 'zorab47/vim-gams'                   " Gams syntax and formatting
 Plug 'vim-latex/vim-latex'                " LaTex
-Plug 'vimwiki/vimwiki'                    " Vim Wiki - Awesome note-taking plugin!
+"Plug 'vimwiki/vimwiki'                    " Vim Wiki - Awesome note-taking plugin!
 Plug 'chrisbra/csv.vim'                   " For working with CSV's
 Plug 'tmux-plugins/vim-tmux'              " For tmux conf file
 "Plug 'scrooloose/syntastic'              " Syntax checking
-Plug 'ivanov/vim-ipython'
+"Plug 'ivanov/vim-ipython'
 
 " Other
 Plug 'Lokaltog/vim-easymotion'            " Easier motions within files
@@ -217,7 +217,7 @@ let R_rconsole_width = 80
 " -plugins }}}
 " -mappings }}}
 " Aesthetics {{{
-colorscheme ir_black
+colorscheme holokai
 
 " Airline configuration
 let g:airline_powerline_fonts = 1
