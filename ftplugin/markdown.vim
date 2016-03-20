@@ -1,3 +1,3 @@
 " Specific settings for markdown files
-set textwidth=78
+"set textwidth=78
 

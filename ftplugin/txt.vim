@@ -1,2 +1,2 @@
 " Common settings for all text files
-set textwidth=78
+"set textwidth=78

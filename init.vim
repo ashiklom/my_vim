@@ -23,7 +23,7 @@ Plug 'clarke/vim-renumber'                " Automatically renumber list
 "Plug 'davidhalter/jedi-vim'               " Python autocompletion
 "Plug 'zorab47/vim-gams'                   " Gams syntax and formatting
 Plug 'vim-latex/vim-latex'                " LaTex
-"Plug 'vimwiki/vimwiki'                    " Vim Wiki - Awesome note-taking plugin!
+Plug 'vimwiki/vimwiki'                    " Vim Wiki - Awesome note-taking plugin!
 Plug 'chrisbra/csv.vim'                   " For working with CSV's
 Plug 'tmux-plugins/vim-tmux'              " For tmux conf file
 "Plug 'scrooloose/syntastic'              " Syntax checking
@@ -57,6 +57,8 @@ set smartcase           " Only ignore case if all lowercase
 " 4 Displaying text {{{
 set wrap            " allow soft wrapping
 set linebreak       " Break lines at logical places
+set breakindent     " Align soft wrap
+set breakindentopt=shift:2
 set lazyredraw      " don't withdraw while executing macros
 set nolist          " display certain characters
 set listchars=tab:>-    " String for displaying tabs
@@ -92,8 +94,8 @@ set copyindent      " copy previous indentation on autoindenting
 " }}}
 " 15 Folding {{{
 set foldenable
-set foldlevelstart=0
-set foldmethod=marker
+set foldlevelstart=99
+set foldmethod=indent
 set foldnestmax=10
 " }}}
 " 17 Mapping {{{
@@ -120,8 +122,7 @@ set shell=/bin/zsh      " Set zsh to default shell
 " Load user-defined functions {{{
 source ~/.config/nvim/customfunctions.vim
 " }}}
-" Mappings {{{
-" Vanilla {{{
+" Vanilla mappings {{{
 let mapleader = ","
 let maplocalleader = "\\"
 
@@ -163,15 +164,12 @@ inoremap <C-h> <C-d>
 " Spelling
 nnoremap <leader>/ :set spell!<CR>
 
-" Change word to uppercase in insert mode
-inoremap <c-u> <ESC>viwUea
-
 " Quickly change to prose style
 nnoremap <leader>pp :call ToggleHard()<CR>
 "inoremap <c-p> <ESC>:call ToggleHard()<CR>a
 nnoremap <leader>ps :set wrap!
 " -vanilla }}}
-" Plugins {{{
+" Plugin mappings {{{
 " NERDTree (File browse)
 noremap <leader>ee :NERDTreeToggle<CR>
 
@@ -205,12 +203,7 @@ map <localleader>n <Plug>VO_JumpBack
 
 " LaTeX
 map <localleader><enter> <Plug>IMAP_JumpForward
-imap <C-j> <Plug>IMAP_JumpForward
-
-" Vim-R plugin
-let R_vsplit = 1
-let R_rconsole_width = 80
-let R_nvimpager = "tab"
+imap <C-U> <Plug>IMAP_JumpForward
 
 " Neovim terminal
 autocmd BufWinEnter,WinEnter term://* startinsert
@@ -228,13 +221,32 @@ tnoremap <ESC> <C-\><C-n>
 tnoremap <left> <C-\><C-n>:bp<CR>
 tnoremap <right> <C-\><C-n>:bn<CR>
 
+" vimwiki
+imap <C-O> <Plug>VimwikiListNextSymbol
+imap <C-P> <Plug>VimwikiListPrevSymbol
+imap <C-U> <Plug>VimwikiListToggle
+imap <C-L> <Plug>VimwikiIncreaseLvlSingleItem
+imap <C-H> <Plug>VimwikiDecreaseLvlSingleItem
+
+" -plugins }}}
+" Plugin settings {{{
+" Vim-R plugin
+let R_vsplit = 1
+let R_rconsole_width = 80
+let R_nvimpager = "tab"
+
 " YouCompleteMe
 "let g:ycm_key_invoke_completion = '<tab>'
 "let g:ycm_auto_trigger = 0
-" -plugins }}}
-" -mappings }}}
+
+" VimWiki
+  let wiki = {}
+  let wiki.nested_syntaxes = {'python': 'python', 'cpp': 'cpp', 'R': 'R', 'css': 'css', 'bash': 'bash', 'sass': 'sass'}
+  let g:vimwiki_list = [wiki]
+ 
+" }}}
 " Aesthetics {{{
-colorscheme molokai
+colorscheme molokai_dark
 
 " Airline configuration
 let g:airline_powerline_fonts = 1
@@ -242,4 +254,4 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline_section_x = '%{ShowHard()}'
 let g:airline_section_y = '%y'
 " }}}
-" vim: set foldlevel=0 :
+" vim: set foldmethod=marker foldlevel=0 :
