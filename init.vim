@@ -11,12 +11,15 @@ Plug 'bling/vim-airline'                  " Nice status bar for buffers
 Plug 'jeetsukumaran/vim-buffergator'      " Buffer management
 Plug 'danro/rename.vim'                   " Rename current file
 Plug 'benekastah/neomake'                 " Asynchronous make through neovim
+Plug 'LucHermitte/lh-vim-lib'
+Plug 'LucHermitte/local_vimrc'
 
 " Formatting
 Plug 'godlygeek/tabular'                  " Another alignment package; Required by vim-markdown
 Plug 'tpope/vim-surround'                 " Easy surrounding
 Plug 'scrooloose/nerdcommenter'           " Easier commenting
 Plug 'clarke/vim-renumber'                " Automatically renumber list
+"Plug 'roman/golden-ratio'                 " Automatically resize active splits to the golden ratio
 "Plug 'ashiklom/vimoutliner'
 
 " Filetype-specific
@@ -31,6 +34,10 @@ Plug 'tmux-plugins/vim-tmux'              " For tmux conf file
 
 " Other
 Plug 'Lokaltog/vim-easymotion'            " Easier motions within files
+Plug 'mattn/calendar-vim'                 " Powerful calendar inside vim
+"Plug 'tbabej/taskwiki'
+"Plug 'blindFS/vim-taskwarrior'            " Interface for task warrior management system
+"Plug 'itchyny/calendar.vim'
 "Plug 'reedes/vim-pencil'                 " Easy formatting for prose in vim
 "Plug 'Valloric/YouCompleteMe'             " Better code completion
 "Plug 'christoomey/vim-tmux-navigator'    " Easy tmux navigation
@@ -126,14 +133,14 @@ source ~/.config/nvim/customfunctions.vim
 let mapleader = ","
 let maplocalleader = "\\"
 
-nnoremap ; :
-nnoremap <Return> ;
+" Disable 'Ex' mode
+map Q <Nop>
+
+"nnoremap ; :
+"nnoremap <Return> ;
 nnoremap <Backspace> ,
 nnoremap S :w!<CR>
 inoremap jk <ESC>
-
-" Disable 'Ex' mode
-map Q <Nop>
 
 " Clear search highlights with <leader> <space>
 nnoremap <leader><space> :nohlsearch<cr>
@@ -182,11 +189,12 @@ nnoremap <leader>o :CtrlPMRU<CR>
 " BufferGator (buffer management)
 let g:buffergator_suppress_keymaps = 1
 nnoremap <leader>l :BuffergatorOpen<CR>
-nnoremap <leader>q :bp <BAR> bd #<CR>
-nnoremap <left> :bp<CR>
-nnoremap <right> :bn<CR>
-nnoremap <up> :tabprevious<CR>
-nnoremap <down> :tabnext<CR>
+nnoremap <leader>a :BuffergatorTabsOpen<CR>
+nnoremap <leader>q :bp<BAR>bd#<CR>
+nnoremap <UP> :bp<CR>
+nnoremap <DOWN> :bn<CR>
+nnoremap <PageUp> :tabprevious<CR>
+nnoremap <PageDown> :tabnext<CR>
 
 " Easy align 
 map <leader>ea :Tabularize /
@@ -198,52 +206,75 @@ nnoremap <leader>gp :Gpush<CR>
 nnoremap <leader>gu :Gpull<CR>
 
 " Vim outliner
-map <localleader>k <Plug>VO_FollowLink
-map <localleader>n <Plug>VO_JumpBack
+"map <localleader>k <Plug>VO_FollowLink
+"map <localleader>n <Plug>VO_JumpBack
 
 " LaTeX
-map <localleader><enter> <Plug>IMAP_JumpForward
+nmap <localleader><enter> <Plug>IMAP_JumpForward
 imap <C-U> <Plug>IMAP_JumpForward
 
 " Neovim terminal
-autocmd BufWinEnter,WinEnter term://* startinsert
-autocmd BufLeave term://* stopinsert
+augroup terminal
+    autocmd BufWinEnter,WinEnter term://* startinsert
+    autocmd BufLeave term://* stopinsert
+augroup END
 
 tnoremap <C-h> <C-\><C-n><C-w>h
 tnoremap <C-S-l> <C-\><C-n><C-w>l
 tnoremap <C-j> <C-\><C-n><C-w>j
 tnoremap <C-S-k> <C-\><C-n><C-w>k
 
-tnoremap <C-l> <ESC>ddiclear<CR><ESC>i
+"tnoremap <C-l> <ESC>ddiclear<CR><ESC>i
 
 tnoremap jk <ESC>
 tnoremap <ESC> <C-\><C-n>
-tnoremap <left> <C-\><C-n>:bp<CR>
-tnoremap <right> <C-\><C-n>:bn<CR>
+"tnoremap <left> <C-\><C-n>:bp<CR>
+"tnoremap <right> <C-\><C-n>:bn<CR>
 
 " vimwiki
-imap <C-O> <Plug>VimwikiListNextSymbol
-imap <C-P> <Plug>VimwikiListPrevSymbol
+imap <C-K><C-K> <Plug>VimwikiListNextSymbol
+imap <C-K><C-J> <Plug>VimwikiListPrevSymbol
 imap <C-U> <Plug>VimwikiListToggle
 imap <C-L> <Plug>VimwikiIncreaseLvlSingleItem
 imap <C-H> <Plug>VimwikiDecreaseLvlSingleItem
+imap <C-D> <ESC>:call Date()<CR>kJA
+nmap <Leader>k <Plug>VimwikiDiaryPrevDay
+nmap <Leader>j <Plug>VimwikiDiaryNextDay
+nmap <leader>w<leader>c :VimwikiTOC<CR>
+cabbrev vwt VimwikiTable
+iabbrev <expr> adby strftime("%A, %d %B %Y")
+
+" mattn/caledar-vim
+augroup calendar
+    au FileType calendar nmap <buffer> l /\( \\|\d\)\d\(+\\|*\\| \)<CR>:noh<CR>
+    au FileType calendar nmap <buffer> h lNN:noh<CR>
+augroup END
+
+" calendar.vim
+"nmap <leader>cal :Calendar<CR>
+":command! -nargs=1 Silent execute ':silent '.<q-args> | execute ':redraw!'
+"autocmd FileType calendar nmap <buffer> <CR> :<C-u>Silent call vimwiki#diary#calendar_action(b:calendar.day().get_day(), b:calendar.day().get_month(), b:calendar.day().get_year(), b:calendar.day().week(), "V")<CR>
 
 " -plugins }}}
 " Plugin settings {{{
+" Buffergator
+let g:buffergator_autoupdate = 0
+
 " Vim-R plugin
 let R_vsplit = 1
-let R_rconsole_width = 80
 let R_nvimpager = "tab"
+"let R_rconsole_width = 80
 
 " YouCompleteMe
 "let g:ycm_key_invoke_completion = '<tab>'
 "let g:ycm_auto_trigger = 0
 
 " VimWiki
-  let wiki = {}
-  let wiki.nested_syntaxes = {'python': 'python', 'cpp': 'cpp', 'R': 'R', 'css': 'css', 'bash': 'bash', 'sass': 'sass'}
-  let g:vimwiki_list = [wiki]
+source ~/.config/nvim/vimwiki.settings.vim
  
+" golden-ratio
+"let g:golden_ratio_exclude_nonmodifiable = 1
+
 " }}}
 " Aesthetics {{{
 colorscheme molokai_dark
@@ -254,4 +285,6 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline_section_x = '%{ShowHard()}'
 let g:airline_section_y = '%y'
 " }}}
+"
+
 " vim: set foldmethod=marker foldlevel=0 :
