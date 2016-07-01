@@ -25,6 +25,7 @@ Plug 'clarke/vim-renumber'                " Automatically renumber list
 " Filetype-specific
 "Plug 'davidhalter/jedi-vim'               " Python autocompletion
 "Plug 'zorab47/vim-gams'                   " Gams syntax and formatting
+"Plug 'plasticboy/vim-markdown'
 Plug 'vim-latex/vim-latex'                " LaTex
 Plug 'vimwiki/vimwiki'                    " Vim Wiki - Awesome note-taking plugin!
 Plug 'chrisbra/csv.vim'                   " For working with CSV's
@@ -33,6 +34,8 @@ Plug 'tmux-plugins/vim-tmux'              " For tmux conf file
 "Plug 'ivanov/vim-ipython'
 
 " Other
+Plug 'vim-pandoc/vim-pandoc'
+Plug 'vim-pandoc/vim-pandoc-syntax'
 Plug 'Lokaltog/vim-easymotion'            " Easier motions within files
 Plug 'mattn/calendar-vim'                 " Powerful calendar inside vim
 "Plug 'tbabej/taskwiki'
@@ -171,10 +174,11 @@ inoremap <C-h> <C-d>
 " Spelling
 nnoremap <leader>/ :set spell!<CR>
 
-" Quickly change to prose style
+" Quickly change to hard wrap
 nnoremap <leader>pp :call ToggleHard()<CR>
 "inoremap <c-p> <ESC>:call ToggleHard()<CR>a
-nnoremap <leader>ps :set wrap!
+nnoremap <leader>ps :set wrap!<CR>
+nnoremap <leader>pb :set breakindent!<CR>
 " -vanilla }}}
 " Plugin mappings {{{
 " NERDTree (File browse)
@@ -191,6 +195,7 @@ let g:buffergator_suppress_keymaps = 1
 nnoremap <leader>l :BuffergatorOpen<CR>
 nnoremap <leader>a :BuffergatorTabsOpen<CR>
 nnoremap <leader>q :bp<BAR>bd#<CR>
+nnoremap <leader>x :bn<BAR>bd#<CR>
 nnoremap <UP> :bp<CR>
 nnoremap <DOWN> :bn<CR>
 nnoremap <PageUp> :tabprevious<CR>
@@ -250,6 +255,9 @@ augroup calendar
     au FileType calendar nmap <buffer> h lNN:noh<CR>
 augroup END
 
+" neomake
+nmap <leader>nm :Neomake!<CR>
+
 " calendar.vim
 "nmap <leader>cal :Calendar<CR>
 ":command! -nargs=1 Silent execute ':silent '.<q-args> | execute ':redraw!'
@@ -265,6 +273,13 @@ let R_vsplit = 1
 let R_nvimpager = "tab"
 "let R_rconsole_width = 80
 
+" vim-markdown
+let g:vim_markdown_frontmatter = 1
+
+" vim-pandoc
+let g:pandoc#syntax#conceal#use = 0
+let g:pandoc#spell#enabled = 0
+let g:pandoc#keyboard#use_default_mappings = 0
 " YouCompleteMe
 "let g:ycm_key_invoke_completion = '<tab>'
 "let g:ycm_auto_trigger = 0
