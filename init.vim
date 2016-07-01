@@ -19,6 +19,7 @@ Plug 'godlygeek/tabular'                  " Another alignment package; Required 
 Plug 'tpope/vim-surround'                 " Easy surrounding
 Plug 'scrooloose/nerdcommenter'           " Easier commenting
 Plug 'clarke/vim-renumber'                " Automatically renumber list
+Plug 'tpope/vim-sleuth'
 "Plug 'roman/golden-ratio'                 " Automatically resize active splits to the golden ratio
 "Plug 'ashiklom/vimoutliner'
 
