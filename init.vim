@@ -19,6 +19,8 @@ Plug 'godlygeek/tabular'                  " Another alignment package; Required 
 Plug 'tpope/vim-surround'                 " Easy surrounding
 Plug 'scrooloose/nerdcommenter'           " Easier commenting
 Plug 'clarke/vim-renumber'                " Automatically renumber list
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-sleuth'                   " Autodetect formatting from files
 "Plug 'roman/golden-ratio'                 " Automatically resize active splits to the golden ratio
 "Plug 'ashiklom/vimoutliner'
 
@@ -30,6 +32,7 @@ Plug 'vim-latex/vim-latex'                " LaTex
 Plug 'vimwiki/vimwiki'                    " Vim Wiki - Awesome note-taking plugin!
 Plug 'chrisbra/csv.vim'                   " For working with CSV's
 Plug 'tmux-plugins/vim-tmux'              " For tmux conf file
+Plug 'maverickg/stan.vim'                 " For STAN model files
 "Plug 'scrooloose/syntastic'              " Syntax checking
 "Plug 'ivanov/vim-ipython'
 
@@ -38,6 +41,7 @@ Plug 'vim-pandoc/vim-pandoc'
 Plug 'vim-pandoc/vim-pandoc-syntax'
 Plug 'Lokaltog/vim-easymotion'            " Easier motions within files
 Plug 'mattn/calendar-vim'                 " Powerful calendar inside vim
+Plug 'tpope/vim-obsession'                " Session management
 "Plug 'tbabej/taskwiki'
 "Plug 'blindFS/vim-taskwarrior'            " Interface for task warrior management system
 "Plug 'itchyny/calendar.vim'
@@ -59,6 +63,7 @@ filetype plugin indent on
 syntax enable
 " }}}
 " Options (see :options) {{{
+set termguicolors 
 " 2 Moving around, searching and patterns {{{
 set incsearch		" search as characters are entered
 set ignorecase          " Ignore case in search
@@ -68,11 +73,12 @@ set smartcase           " Only ignore case if all lowercase
 set wrap            " allow soft wrapping
 set linebreak       " Break lines at logical places
 set breakindent     " Align soft wrap
-set breakindentopt=shift:2
+"set breakindentopt=shift:2
 set lazyredraw      " don't withdraw while executing macros
 set nolist          " display certain characters
 set listchars=tab:>-    " String for displaying tabs
 set number          " line numbers
+set scrolloff=8
 " }}}
 " 5 Syntax, highlighting, and spelling {{{
 set hlsearch		" highlight matches
@@ -138,6 +144,9 @@ let maplocalleader = "\\"
 
 " Disable 'Ex' mode
 map Q <Nop>
+
+" Disable man page view
+map K <Nop>
 
 "nnoremap ; :
 "nnoremap <Return> ;
@@ -225,9 +234,9 @@ augroup terminal
 augroup END
 
 tnoremap <C-h> <C-\><C-n><C-w>h
-tnoremap <C-S-l> <C-\><C-n><C-w>l
+tnoremap <C-l> <C-\><C-n><C-w>l
 tnoremap <C-j> <C-\><C-n><C-w>j
-tnoremap <C-S-k> <C-\><C-n><C-w>k
+tnoremap <C-k> <C-\><C-n><C-w>k
 
 "tnoremap <C-l> <ESC>ddiclear<CR><ESC>i
 
@@ -292,7 +301,7 @@ source ~/.config/nvim/vimwiki.settings.vim
 
 " }}}
 " Aesthetics {{{
-colorscheme molokai_dark
+colorscheme molokai
 
 " Airline configuration
 let g:airline_powerline_fonts = 1
@@ -300,6 +309,5 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline_section_x = '%{ShowHard()}'
 let g:airline_section_y = '%y'
 " }}}
-"
 
 " vim: set foldmethod=marker foldlevel=0 :
