@@ -11,8 +11,8 @@ Plug 'bling/vim-airline'                  " Nice status bar for buffers
 Plug 'jeetsukumaran/vim-buffergator'      " Buffer management
 Plug 'danro/rename.vim'                   " Rename current file
 Plug 'benekastah/neomake'                 " Asynchronous make through neovim
-Plug 'LucHermitte/lh-vim-lib'
-Plug 'LucHermitte/local_vimrc'
+"Plug 'LucHermitte/lh-vim-lib'
+"Plug 'LucHermitte/local_vimrc'
 
 " Formatting
 Plug 'godlygeek/tabular'                  " Another alignment package; Required by vim-markdown
