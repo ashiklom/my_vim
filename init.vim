@@ -50,7 +50,7 @@ Plug 'tpope/vim-obsession'                " Session management
 "Plug 'christoomey/vim-tmux-navigator'    " Easy tmux navigation
 
 " Color schemes
-Plug 'flazz/vim-colorschemes'             " Big library of vim color schemes!
+Plug 'ashiklom/vim-colorschemes'             " Big library of vim color schemes!
 
 " Vim / neovim
 if has('nvim')
@@ -301,7 +301,7 @@ source ~/.config/nvim/vimwiki.settings.vim
 
 " }}}
 " Aesthetics {{{
-colorscheme molokai
+colorscheme molokai_custom
 
 " Airline configuration
 let g:airline_powerline_fonts = 1
