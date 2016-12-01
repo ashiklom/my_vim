@@ -88,6 +88,9 @@ set cursorline      " highlight current line
 set laststatus=2        " Status bar always on
 set hidden              " Modified buffers in background
 " }}}
+" 9 Using the mouse {{{
+set mouse=''    " Disable mouse selection (allows using native terminal features)
+" }}}
 " 11 Messages and info {{{
 set showcmd         " show command in bottom bar
 " }}}
