@@ -248,19 +248,6 @@ tnoremap <ESC> <C-\><C-n>
 "tnoremap <left> <C-\><C-n>:bp<CR>
 "tnoremap <right> <C-\><C-n>:bn<CR>
 
-" vimwiki
-imap <C-K><C-K> <Plug>VimwikiListNextSymbol
-imap <C-K><C-J> <Plug>VimwikiListPrevSymbol
-imap <C-U> <Plug>VimwikiListToggle
-imap <C-L> <Plug>VimwikiIncreaseLvlSingleItem
-imap <C-H> <Plug>VimwikiDecreaseLvlSingleItem
-imap <C-D> <ESC>:call Date()<CR>kJA
-nmap <Leader>k <Plug>VimwikiDiaryPrevDay
-nmap <Leader>j <Plug>VimwikiDiaryNextDay
-nmap <leader>w<leader>c :VimwikiTOC<CR>
-cabbrev vwt VimwikiTable
-iabbrev <expr> adby strftime("%A, %d %B %Y")
-
 " mattn/caledar-vim
 augroup calendar
     au FileType calendar nmap <buffer> l /\( \\|\d\)\d\(+\\|*\\| \)<CR>:noh<CR>
