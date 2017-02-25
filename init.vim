@@ -33,6 +33,9 @@ Plug 'vimwiki/vimwiki'                    " Vim Wiki - Awesome note-taking plugi
 Plug 'chrisbra/csv.vim'                   " For working with CSV's
 Plug 'tmux-plugins/vim-tmux'              " For tmux conf file
 Plug 'maverickg/stan.vim'                 " For STAN model files
+Plug 'pangloss/vim-javascript'
+Plug 'exu/pgsql.vim'                      " PostgreSQL syntax highlighting
+Plug 'bfredl/nvim-ipy'                    " IPython in Neovim
 "Plug 'scrooloose/syntastic'              " Syntax checking
 "Plug 'ivanov/vim-ipython'
 
@@ -42,6 +45,7 @@ Plug 'vim-pandoc/vim-pandoc-syntax'
 Plug 'Lokaltog/vim-easymotion'            " Easier motions within files
 Plug 'mattn/calendar-vim'                 " Powerful calendar inside vim
 Plug 'tpope/vim-obsession'                " Session management
+"Plug 'zhaocai/GoldenView.Vim'             " Automatically resize windows
 "Plug 'tbabej/taskwiki'
 "Plug 'blindFS/vim-taskwarrior'            " Interface for task warrior management system
 "Plug 'itchyny/calendar.vim'
@@ -63,7 +67,9 @@ filetype plugin indent on
 syntax enable
 " }}}
 " Options (see :options) {{{
-set termguicolors 
+if (exists("$TMUX"))
+    set termguicolors 
+endif
 " 2 Moving around, searching and patterns {{{
 set incsearch		" search as characters are entered
 set ignorecase          " Ignore case in search
@@ -108,8 +114,12 @@ set smarttab
 set softtabstop=4
 set shiftround      " use multiple of shiftwidth when indenting with <or >
 set expandtab       " tabs are spaces
-set autoindent
+"set autoindent
 set copyindent      " copy previous indentation on autoindenting
+
+set cindent             " C-style indenting rules
+set cinoptions=(0,W4,m1    " Indent long lines ending in parentheses (e.g. function arguments)
+
 " }}}
 " 15 Folding {{{
 set foldenable
@@ -178,6 +188,7 @@ nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
+nnoremap <C-q> :q<CR>
 
 " Easy indentation in insert mode
 inoremap <C-l> <C-t>
@@ -193,6 +204,7 @@ nnoremap <leader>ps :set wrap!<CR>
 nnoremap <leader>pb :set breakindent!<CR>
 " -vanilla }}}
 " Plugin mappings {{{
+
 " NERDTree (File browse)
 noremap <leader>ee :NERDTreeToggle<CR>
 
@@ -243,7 +255,7 @@ tnoremap <C-k> <C-\><C-n><C-w>k
 
 "tnoremap <C-l> <ESC>ddiclear<CR><ESC>i
 
-tnoremap jk <ESC>
+tnoremap jk <C-\><C-n>
 tnoremap <ESC> <C-\><C-n>
 "tnoremap <left> <C-\><C-n>:bp<CR>
 "tnoremap <right> <C-\><C-n>:bn<CR>
@@ -256,6 +268,11 @@ augroup END
 
 " neomake
 nmap <leader>nm :Neomake!<CR>
+"
+" GoldenView
+"let g:goldenview__enable_default_mapping = 0
+"nmap <silent> <C-N> <Plug>GoldenViewSplit
+
 
 " calendar.vim
 "nmap <leader>cal :Calendar<CR>
@@ -268,9 +285,16 @@ nmap <leader>nm :Neomake!<CR>
 let g:buffergator_autoupdate = 0
 
 " Vim-R plugin
-let R_vsplit = 1
 let R_nvimpager = "tab"
-"let R_rconsole_width = 80
+let R_rconsole_width = 80
+let R_min_editor_width = 80
+let R_pdfviewer = 'okular'
+let R_assign_map = "<M-->"
+let r_indent_align_args = 0
+"let r_indent_ess_compatible = 1 
+
+" Start in Vim working directory
+let R_nvim_wd = 1
 
 " vim-markdown
 let g:vim_markdown_frontmatter = 1
@@ -288,6 +312,13 @@ source ~/.config/nvim/vimwiki.settings.vim
  
 " golden-ratio
 "let g:golden_ratio_exclude_nonmodifiable = 1
+
+" GoldenView
+"let g:goldenview__restore_urule = { 'buftype' : ['terminal'] }
+
+" nvim-ipy
+" Disable default mappings. See ftplugin/python.vim for mappings
+let g:nvim_ipy_perform_mappings = 0
 
 " }}}
 " Aesthetics {{{

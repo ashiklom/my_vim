@@ -3,4 +3,5 @@ spell
 .netrwhist
 undodir
 .old
+autoload/plug.vim.old
 

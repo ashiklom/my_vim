@@ -1,5 +1,3 @@
-set nowrap
-
 nnoremap <buffer> <localleader>td <Plug>RDputObj
 nnoremap <buffer> <localleader>tp <Plug>RPrintObj
 
