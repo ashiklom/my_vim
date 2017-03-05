@@ -114,11 +114,11 @@ set smarttab
 set softtabstop=4
 set shiftround      " use multiple of shiftwidth when indenting with <or >
 set expandtab       " tabs are spaces
-"set autoindent
+set autoindent
 set copyindent      " copy previous indentation on autoindenting
 
-set cindent             " C-style indenting rules
-set cinoptions=(0,W4,m1    " Indent long lines ending in parentheses (e.g. function arguments)
+"set cindent             " C-style indenting rules
+"set cinoptions=(0,W4,m1    " Indent long lines ending in parentheses (e.g. function arguments)
 
 " }}}
 " 15 Folding {{{
@@ -290,7 +290,7 @@ let R_rconsole_width = 80
 let R_min_editor_width = 80
 let R_pdfviewer = 'okular'
 let R_assign_map = "<M-->"
-let r_indent_align_args = 0
+"let r_indent_align_args = 0
 "let r_indent_ess_compatible = 1 
 
 " Start in Vim working directory
