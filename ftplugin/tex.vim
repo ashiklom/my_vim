@@ -17,3 +17,6 @@ let g:Tex_MultipleCompileFormats = 'pdf, aux'
 nnoremap <leader>mk :make
 nnoremap <leader>vv :!gnome-open *.pdf &<CR><CR>
 
+" LaTeX
+nmap <localleader><enter> <Plug>IMAP_JumpForward
+imap <C-U> <Plug>IMAP_JumpForward
