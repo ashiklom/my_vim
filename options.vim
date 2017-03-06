@@ -7,7 +7,7 @@ set incsearch		" search as characters are entered
 set ignorecase          " Ignore case in search
 set smartcase           " Only ignore case if all lowercase
 
-set wrap            " allow soft wrapping
+set nowrap          " Soft line wrapping
 set linebreak       " Break lines at logical places
 set breakindent     " Align soft wrap
 "set breakindentopt=shift:2
@@ -15,7 +15,7 @@ set lazyredraw      " don't withdraw while executing macros
 set nolist          " display certain characters
 set listchars=tab:>-    " String for displaying tabs
 set number          " line numbers
-set scrolloff=8
+set scrolloff=2     " Scroll this many lines before hitting the bottom of the screen
 
 set hlsearch		" highlight matches
 set cursorline      " highlight current line
@@ -31,7 +31,7 @@ set undolevels=1000      " Maximum number of changes that can be undone
 set undoreload=1000      " Max number of lines to save for undo
 set backspace=2          " Fix backspace behavior
 set noshowmatch          " do not show matching parentheses
-set formatoptions=qwnj   " No autoformatting by default
+set formatoptions=qwj   " No autoformatting by default
 
 set tabstop=8
 set shiftwidth=4    " size of an indent

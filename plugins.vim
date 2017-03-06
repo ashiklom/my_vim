@@ -18,6 +18,7 @@ Plug 'scrooloose/nerdcommenter' " Easier commenting
 Plug 'clarke/vim-renumber'      " Automatically renumber list
 Plug 'tpope/vim-repeat'         " For repeating advanced vim commands
 Plug 'ciaranm/detectindent'     " Automatically detect formatting (like vim-sleuth, but I can call it manually
+Plug 'jiangmiao/auto-pairs'     " Automatically close quotes, parentheses, etc.
 
 "Plug 'junegunn/vim-easy-align'            " Easy align
 "Plug 'tpope/vim-sleuth'                   " Autodetect formatting from files
