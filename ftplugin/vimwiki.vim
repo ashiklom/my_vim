@@ -1,6 +1,6 @@
 " vimwiki
-imap <silent><buffer> <C-K><C-K> <Plug>VimwikiListNextSymbol
-imap <silent><buffer> <C-K><C-J> <Plug>VimwikiListPrevSymbol
+imap <silent><buffer> <C-S> <Plug>VimwikiListNextSymbol
+imap <silent><buffer> <C-A> <Plug>VimwikiListPrevSymbol
 imap <silent><buffer> <C-U> <Plug>VimwikiListToggle
 imap <silent><buffer> <C-L> <Plug>VimwikiIncreaseLvlSingleItem
 imap <silent><buffer> <C-H> <Plug>VimwikiDecreaseLvlSingleItem
@@ -11,3 +11,5 @@ nmap <silent><buffer> <leader>w<leader>c :VimwikiTOC<CR>
 cabbrev vwt VimwikiTable
 iabbrev <expr> adby strftime("%A, %d %B %Y")
 
+" Autopairs rule
+let b:AutoPairs = {"(": ")"}

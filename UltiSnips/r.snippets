@@ -1,0 +1,27 @@
+extends r
+
+snippet #! "Hashbang for Rscript"
+#!/usr/bin/env Rscript
+endsnippet
+
+snippet fun "Function"
+${1:name} <- function(${2:parameters}) {
+    ${0}
+}
+endsnippet
+
+snippet lib "library"
+library(${0})
+endsnippet
+
+snippet if 
+if (${1:condition}) {
+    ${0}
+}
+endsnippet
+
+snippet elif
+else if {${1:condition}} {
+    ${0}
+}
+endsnippet

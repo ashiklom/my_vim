@@ -1,0 +1,30 @@
+snippet today "VimWiki template for today" 
+= `date --date="today" +"%A, %d %B %Y"` =
+
+= Plan =
+
+Events:
+    * ${1:Events}
+
+Goals:
+    1. [ ] ${2:Goals}
+
+= Notes =
+- ${0}
+endsnippet
+
+
+snippet tomorrow "VimWiki template for tomorrow" 
+= `date --date="tomorrow" +"%A, %d %B %Y"` =
+
+= Plan =
+
+Events:
+    * ${1:Events}
+
+Goals:
+    1. [ ] ${2:Goals}
+
+= Notes =
+- ${0}
+endsnippet

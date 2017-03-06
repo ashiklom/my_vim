@@ -103,10 +103,16 @@ nmap <leader>nm :Neomake!<CR>
 " Disable default mappings. See ftplugin/python.vim for mappings
 let g:nvim_ipy_perform_mappings = 0
 
-
 " Easy align 
-"map <leader>ea :Tabularize /
-"map <leader>et :Tabularize //l3c1l0<left><left><left><left><left><left><left>
+map <leader>ea :Tabularize /
+map <leader>et :Tabularize //l3c1l0<left><left><left><left><left><left><left>
+
+" UltiSnips (default mappings, just making them explicit)
+map <leader>ue :UltiSnipsEdit<CR>
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-j>"
+let g:UltiSnipsJumpBackwardTrigger="<c-k>"
+let g:UltiSnipsSnippetsDir=vimdir . "UltiSnips"
 
 " calendar.vim
 "nmap <leader>cal :Calendar<CR>

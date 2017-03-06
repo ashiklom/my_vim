@@ -47,6 +47,7 @@ Plug 'vim-pandoc/vim-pandoc-syntax'
 Plug 'Lokaltog/vim-easymotion'            " Easier motions within files
 Plug 'mattn/calendar-vim'                 " Powerful calendar inside vim
 Plug 'tpope/vim-obsession'                " Session management
+Plug 'SirVer/ultisnips'                 " Snippets
 
 "Plug 'zhaocai/GoldenView.Vim'             " Automatically resize windows
 "Plug 'tbabej/taskwiki'
