@@ -1,10 +1,10 @@
-" Core (neo)vim configuration
+" Title: Core (neo)vim configuration
 " Author: Alexey Shiklomanov
 
 if has('nvim')
-    let vimdir = '~/.config/nvim/'
+    let vimdir = $HOME . '/.config/nvim/'
 else
-    let vimdir = '~/.vim/'
+    let vimdir = $HOME . '/.vim/'
 endif
 
 exec "source " . vimdir . "plugins.vim"
