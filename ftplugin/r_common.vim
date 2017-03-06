@@ -10,3 +10,6 @@ let R_assign_map = "<M-->"
 "let r_indent_align_args = 0
 "let r_indent_ess_compatible = 1 
 let R_nvim_wd = 1
+
+" Key shortcut for pipe
+imap <buffer> <M-.> <space>%>%<space>
