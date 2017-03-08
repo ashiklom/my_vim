@@ -34,6 +34,7 @@ Plug 'maverickg/stan.vim'                 " For STAN model files
 Plug 'pangloss/vim-javascript'
 Plug 'exu/pgsql.vim'                      " PostgreSQL syntax highlighting
 Plug 'bfredl/nvim-ipy'                    " IPython in Neovim
+Plug 'vim-scripts/bbcode'
 
 "Plug 'davidhalter/jedi-vim'               " Python autocompletion
 "Plug 'zorab47/vim-gams'                   " Gams syntax and formatting
