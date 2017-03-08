@@ -23,6 +23,5 @@ let wiki_forecasting.path = '~/Dropbox/Courses/GE585\ Ecological\ Forecasting/wi
 let g:vimwiki_list = [wiki_labnotebook, wiki_programming, wiki_climatemodes, wiki_rsseminar, wiki_forecasting]
 "let g:vimwiki_use_calendar=1
 
-"iabbrev vwtemp <ESC>:let @d=strftime("%A, %d %B %Y")<CR>"dP=o<CR>= Plan =<CR><CR>Events:<CR><CR>Goals:<CR><ESC>
 let g:vimwiki_table_mappings = 0
 

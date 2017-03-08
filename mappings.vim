@@ -110,9 +110,17 @@ map <leader>et :Tabularize //l3c1l0<left><left><left><left><left><left><left>
 " UltiSnips (default mappings, just making them explicit)
 map <leader>ue :UltiSnipsEdit<CR>
 let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<c-j>"
-let g:UltiSnipsJumpBackwardTrigger="<c-k>"
+let g:UltiSnipsJumpForwardTrigger="<c-]>"
+let g:UltiSnipsJumpBackwardTrigger="<c-[>"
 let g:UltiSnipsSnippetsDir=vimdir . "UltiSnips"
+
+" Autopairs
+" Don't map control-H
+let g:AutoPairsMapCh = 0
+
+" LaTeX (has tobe here to enable <C-J>)
+nmap <localleader><enter> <Plug>IMAP_JumpForward
+imap <C-U> <Plug>IMAP_JumpForward
 
 " calendar.vim
 "nmap <leader>cal :Calendar<CR>

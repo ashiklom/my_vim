@@ -4,7 +4,7 @@
 "source ~/.nvim/ftplugin/txt.vim
 
 " Additional custom settings
-set sw=2
+set shiftwidth=2
 set iskeyword+=:
 
 " LaTeX 
@@ -14,9 +14,5 @@ let g:Tex_DefaultFormat = 'pdf'
 let g:Tex_MultipleCompileFormats = 'pdf, aux'
 
 " Quick make and view
-nnoremap <leader>mk :make
-nnoremap <leader>vv :!gnome-open *.pdf &<CR><CR>
-
-" LaTeX
-nmap <localleader><enter> <Plug>IMAP_JumpForward
-imap <C-U> <Plug>IMAP_JumpForward
+"nnoremap <leader>mk    " Use neomake (,nm) instead
+nnoremap <leader>vv :!xdg-open *.pdf &<CR><CR>
