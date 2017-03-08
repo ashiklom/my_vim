@@ -4,11 +4,11 @@
 "source ~/.nvim/ftplugin/txt.vim
 
 " Additional custom settings
-set shiftwidth=2
-set iskeyword+=:
+setlocal shiftwidth=2
+setlocal iskeyword+=:
 
 " LaTeX 
-set grepprg=grep\ -nH\ $*
+setlocal grepprg=grep\ -nH\ $*
 let g:tex_flavor='latex'
 let g:Tex_DefaultFormat = 'pdf'
 let g:Tex_MultipleCompileFormats = 'pdf, aux'
