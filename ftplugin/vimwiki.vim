@@ -13,3 +13,5 @@ iabbrev <expr> adby strftime("%A, %d %B %Y")
 
 " Autopairs rule
 let b:AutoPairs = {"(": ")"}
+
+setlocal wrap

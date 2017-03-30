@@ -17,3 +17,7 @@ vmap <buffer> <localleader>tt <Plug>RDputObj
 
 " Key shortcut for pipe
 imap <buffer> <M-.> <space>%>%<space>
+imap <buffer> <M-t> <space>%T>%<space>
+
+" Insert line of comment tags
+nmap <buffer> <localleader>cc 060i#<ESC>j

@@ -41,6 +41,9 @@ nnoremap <C-q> :q<CR>
 inoremap <C-l> <C-t>
 inoremap <C-h> <C-d>
 
+" Insert literal tab using Shift-tab (useful for code tables)
+inoremap <S-Tab> <C-V><Tab>
+
 " Spelling
 nnoremap <leader>/ :set spell!<CR>
 
