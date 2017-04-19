@@ -19,5 +19,8 @@ vmap <buffer> <localleader>tt <Plug>RDputObj
 imap <buffer> <M-.> <space>%>%<space>
 imap <buffer> <M-t> <space>%T>%<space>
 
+" Key shortcut for roxygen comment
+imap <buffer> <M-c> #<C-v>'<space>
+
 " Insert line of comment tags
 nmap <buffer> <localleader>cc 060i#<ESC>j
