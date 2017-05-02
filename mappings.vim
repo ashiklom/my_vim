@@ -111,6 +111,8 @@ nmap <leader>nm :Neomake!<CR>
 let g:nvim_ipy_perform_mappings = 0
 
 " Easy align 
+xmap ga <Plug>(EasyAlign)
+nmap ga <Plug>(EasyAlign)
 "map <leader>ea :Tabularize /
 "map <leader>et :Tabularize //l3c1l0<left><left><left><left><left><left><left>
 

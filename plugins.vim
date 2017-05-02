@@ -2,7 +2,7 @@ call plug#begin(vimdir . 'bundle')
 
 " Aesthetics
 Plug 'bling/vim-airline'                  " Nice status bar for buffers
-Plug 'ashiklom/vim-colorschemes'             " Big library of vim color schemes!
+Plug 'ashiklom/vim-colorschemes'          " Big library of vim color schemes!
 
 " Version control
 Plug 'tpope/vim-fugitive'                 " Great Git program!
@@ -14,15 +14,15 @@ Plug 'scrooloose/nerdtree'                " File browser
 Plug 'Shougo/denite.nvim'
 
 " Motion extensions
-Plug 'tpope/vim-surround'       " Easy surrounding
-Plug 'tpope/vim-repeat'         " For repeating advanced vim commands
+Plug 'tpope/vim-surround'                 " Easy surrounding
+Plug 'tpope/vim-repeat'                   " For repeating advanced vim commands
 Plug 'Lokaltog/vim-easymotion'            " Easier motions within files
 
 " Formatting
-Plug 'scrooloose/nerdcommenter' " Easier commenting
-Plug 'clarke/vim-renumber'      " Automatically renumber list
-Plug 'ciaranm/detectindent'     " Automatically detect formatting (like vim-sleuth, but I can call it manually
-Plug 'jiangmiao/auto-pairs'     " Automatically close quotes, parentheses, etc.
+Plug 'scrooloose/nerdcommenter'           " Easier commenting
+Plug 'clarke/vim-renumber'                " Automatically renumber list
+Plug 'ciaranm/detectindent'               " Automatically detect formatting (like vim-sleuth, but I can call it manually
+Plug 'jiangmiao/auto-pairs'               " Automatically close quotes, parentheses, etc.
 Plug 'junegunn/vim-easy-align'            " Easy align
 
 " Full filetype plugins
@@ -32,7 +32,7 @@ Plug 'vimwiki/vimwiki'                    " Vim Wiki - Awesome note-taking plugi
 Plug 'mattn/calendar-vim'                 " Powerful calendar inside vim
 Plug 'chrisbra/csv.vim'                   " For working with CSV's
 Plug 'vim-pandoc/vim-pandoc'
-"Plug 'davidhalter/jedi-vim'               " Python autocompletion
+"Plug 'davidhalter/jedi-vim'              " Python autocompletion
 "Plug 'ivanov/vim-ipython'
 "Plug 'scrooloose/syntastic'              " Syntax checking
 
@@ -49,8 +49,8 @@ Plug 'vim-pandoc/vim-pandoc-syntax'
 
 " Other
 Plug 'tpope/vim-obsession'                " Session management
-Plug 'SirVer/ultisnips'                 " Snippets
-Plug 'kshenoy/vim-signature'            " Display marks, and additional mark tools
+Plug 'SirVer/ultisnips'                   " Snippets
+Plug 'kshenoy/vim-signature'              " Display marks, and additional mark tools
 
 call plug#end()
 
