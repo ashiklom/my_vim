@@ -1,7 +1,7 @@
 " Denite global mappings
-nnoremap <leader>t :Denite buffer file_rec<CR>
-nnoremap <leader>b :Denite buffer<CR>
-nnoremap <leader>o :Denite file_old<CR>
+nnoremap <leader>dt :Denite buffer file_rec<CR>
+nnoremap <leader>db :Denite buffer<CR>
+nnoremap <leader>do :Denite file_old<CR>
 nnoremap <leader>df :Denite file<CR>
 nnoremap <leader>dg :Denite grep<CR>
 nnoremap <leader>dG :Denite grepcase<CR>

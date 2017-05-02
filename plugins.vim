@@ -11,6 +11,7 @@ Plug 'airblade/vim-gitgutter'             " Display git changes in real time
 
 " File management
 Plug 'Shougo/denite.nvim'                 " Unifying interface for vim
+Plug 'kien/ctrlp.vim'                     " Fuzzy file search (still much faster and smoother than denite)
 Plug 'benekastah/neomake'                 " Asynchronous make through neovim
 Plug 'scrooloose/nerdtree'                " File browser
 Plug 'brooth/far.vim'                     " Find-replace across files
