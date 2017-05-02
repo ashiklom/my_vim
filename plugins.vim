@@ -2,6 +2,7 @@ call plug#begin(vimdir . 'bundle')
 
 " Aesthetics
 Plug 'bling/vim-airline'                  " Nice status bar for buffers
+"Plug 'bling/vim-bufferline'
 Plug 'ashiklom/vim-colorschemes'          " Big library of vim color schemes!
 
 " Version control
@@ -12,7 +13,7 @@ Plug 'airblade/vim-gitgutter'             " Display git changes in real time
 Plug 'Shougo/denite.nvim'                 " Unifying interface for vim
 Plug 'benekastah/neomake'                 " Asynchronous make through neovim
 Plug 'scrooloose/nerdtree'                " File browser
-Plug 'brooth/far'                         " Find-replace across files
+Plug 'brooth/far.vim'                     " Find-replace across files
 
 " Motion extensions
 Plug 'tpope/vim-surround'                 " Easy surrounding
