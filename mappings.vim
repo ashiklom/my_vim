@@ -65,7 +65,7 @@ nnoremap <RIGHT> :tabnext<CR>
 nnoremap <S-RIGHT> <C-w>>
 nnoremap <S-LEFT> <C-w><
 nnoremap <S-UP> <C-w>-
-nnoremap <S-DOWN> C-w>+
+nnoremap <S-DOWN> <C-w>+
 
 " Neovim terminal
 augroup terminal
