@@ -1,6 +1,6 @@
 " Denite global mappings
+nnoremap <leader>t :Denite buffer file file_rec<CR>
 nnoremap <leader>b :Denite buffer<CR>
-nnoremap <leader>t :Denite file_rec<CR>
 nnoremap <leader>o :Denite file_old<CR>
 nnoremap <leader>df :Denite file<CR>
 nnoremap <leader>dg :Denite grep<CR>
@@ -26,8 +26,8 @@ call denite#custom#map(
 " ---------------------------------
 
 " Use ag for file listing
-call denite#custom#var('file_rec', 'command', 
-            \ ['ag', '--follow', '--nocolor', '--nogroup', '-g', ''])
+"call denite#custom#var('file_rec', 'command', 
+            "\ ['ag', '--follow', '--nocolor', '--nogroup', '-g', ''])
 
 
 " Case-insensitive grep (default)
