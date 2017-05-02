@@ -15,6 +15,7 @@ Plug 'kien/ctrlp.vim'                     " Fuzzy file search (still much faster
 Plug 'benekastah/neomake'                 " Asynchronous make through neovim
 Plug 'scrooloose/nerdtree'                " File browser
 Plug 'brooth/far.vim'                     " Find-replace across files
+Plug 'vim-scripts/rename'                 " Rename current file
 
 " Motion extensions
 Plug 'tpope/vim-surround'                 " Easy surrounding
