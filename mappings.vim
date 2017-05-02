@@ -8,8 +8,7 @@ map Q <Nop>
 " Disable man page view
 map K <Nop>
 
-"nnoremap ; :
-"nnoremap <Return> ;
+nnoremap <Return> ;
 nnoremap <Backspace> ,
 nnoremap S :w!<CR>
 inoremap jk <ESC>
@@ -23,6 +22,10 @@ nnoremap k gk
 vnoremap j gj
 vnoremap k gk
 
+" Select to end/beginning of line
+vnoremap <Return> $h
+vnoremap <Backspace> vhv_
+
 "VIMRC
 nnoremap <leader>ev :e $MYVIMRC<CR>
 nnoremap <leader>sv :source $MYVIMRC<CR>
@@ -35,7 +38,6 @@ nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
-nnoremap <C-q> :q<CR>
 
 " Easy indentation in insert mode
 inoremap <C-l> <C-t>
@@ -47,37 +49,23 @@ inoremap <S-Tab> <C-V><Tab>
 " Spelling
 nnoremap <leader>/ :set spell!<CR>
 
-" Quickly change to hard wrap
-nnoremap <leader>pp :call ToggleHard()<CR>
-"inoremap <c-p> <ESC>:call ToggleHard()<CR>a
+" Toggle wrapping
 nnoremap <leader>ps :set wrap!<CR>
-nnoremap <leader>pb :set breakindent!<CR>
 
-" Plugin mappings
-" NERDTree (File browse)
-noremap <leader>ee :NERDTreeToggle<CR>
-
-" CtrlP (file and buffer fuzzy match)
-nnoremap <leader>b :CtrlPBuffer<CR>
-nnoremap <leader>t :CtrlP<CR>
-nnoremap <leader>d :CtrlPBookmarkDir<CR>
-nnoremap <leader>o :CtrlPMRU<CR>
-
-" BufferGator (buffer management)
-let g:buffergator_suppress_keymaps = 1
-nnoremap <leader>l :BuffergatorOpen<CR>
-nnoremap <leader>a :BuffergatorTabsOpen<CR>
+" Buffer management
+nnoremap <Tab> :b#<CR>
 nnoremap <leader>q :bp<BAR>bd#<CR>
 nnoremap <leader>x :bn<BAR>bd#<CR>
 nnoremap <UP> :bp<CR>
 nnoremap <DOWN> :bn<CR>
-nnoremap <PageUp> :tabprevious<CR>
-nnoremap <PageDown> :tabnext<CR>
+nnoremap <LEFT> :tabprevious<CR>
+nnoremap <RIGHT> :tabnext<CR>
 
-" Git
-nnoremap <leader>gs :Gstatus<CR>
-nnoremap <leader>gp :Gpush<CR>
-nnoremap <leader>gu :Gpull<CR>
+" Window resizing
+nnoremap <S-RIGHT> <C-w>>
+nnoremap <S-LEFT> <C-w><
+nnoremap <S-UP> <C-w>-
+nnoremap <S-DOWN> C-w>+
 
 " Neovim terminal
 augroup terminal
@@ -85,13 +73,29 @@ augroup terminal
     autocmd BufLeave term://* stopinsert
 augroup END
 
+nnoremap gtt :terminal<CR>
+nnoremap gts :split<BAR>terminal<CR>
+nnoremap gtv :vsplit<BAR>terminal<CR>
+tnoremap <ESC> <C-\><C-n>
 tnoremap <C-h> <C-\><C-n><C-w>h
 tnoremap <C-l> <C-\><C-n><C-w>l
 tnoremap <C-j> <C-\><C-n><C-w>j
 tnoremap <C-k> <C-\><C-n><C-w>k
+tnoremap <S-Tab> <C-\><C-n>:b#<CR>
+tnoremap <S-DOWN> <C-\><C-n>:bn<CR>
+tnoremap <S-UP> <C-\><C-n>:bp<CR>
 
-tnoremap jk <C-\><C-n>
-tnoremap <ESC> <C-\><C-n>
+" ----------------------------------------------------------
+" Plugin mappings
+" ----------------------------------------------------------
+
+" NERDTree (File browse)
+noremap <leader>ee :NERDTreeToggle<CR>
+
+" Git
+nnoremap <leader>gs :Gstatus<CR>
+nnoremap <leader>gp :Gpush<CR>
+nnoremap <leader>gu :Gpull<CR>
 
 " mattn/caledar-vim
 augroup calendar
@@ -107,8 +111,8 @@ nmap <leader>nm :Neomake!<CR>
 let g:nvim_ipy_perform_mappings = 0
 
 " Easy align 
-map <leader>ea :Tabularize /
-map <leader>et :Tabularize //l3c1l0<left><left><left><left><left><left><left>
+"map <leader>ea :Tabularize /
+"map <leader>et :Tabularize //l3c1l0<left><left><left><left><left><left><left>
 
 " UltiSnips (default mappings, just making them explicit)
 map <leader>ue :UltiSnipsEdit<CR>

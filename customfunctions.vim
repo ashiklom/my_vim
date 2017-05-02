@@ -34,6 +34,14 @@ function! ShowHard()
     endif
 endfunction
 
+function! WrapOn()
+    if &l:wrap
+        return "wrap"
+    else
+        return "nowrap"
+    endif
+endfunction
+
 function! Prose()
     set wrap linebreak breakindent
     echom 'Enabled soft wrapping'
