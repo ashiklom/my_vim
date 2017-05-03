@@ -8,7 +8,6 @@ map Q <Nop>
 " Disable man page view
 map K <Nop>
 
-nnoremap <Return> ;
 nnoremap <Backspace> ,
 nnoremap S :w!<CR>
 inoremap jk <ESC>
