@@ -54,8 +54,8 @@ nnoremap <leader>ps :set wrap!<CR>
 
 " Buffer management
 nnoremap <Tab> :b#<CR>
-nnoremap <leader>q :bp<BAR>bd#<CR>
-nnoremap <leader>x :bn<BAR>bd#<CR>
+nnoremap <C-S-[> :bp<BAR>bd#<CR>
+nnoremap <C-S-]> :bn<BAR>bd#<CR>
 nnoremap <UP> :bp<CR>
 nnoremap <DOWN> :bn<CR>
 nnoremap <LEFT> :tabprevious<CR>
