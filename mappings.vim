@@ -53,6 +53,7 @@ nnoremap <leader>/ :set spell!<CR>
 nnoremap <leader>ps :set wrap!<CR>
 
 " Buffer management
+nnoremap <leader>qq :q<CR>
 nnoremap <Tab> :b#<CR>
 nnoremap <C-S-[> :bp<BAR>bd#<CR>
 nnoremap <C-S-]> :bn<BAR>bd#<CR>
