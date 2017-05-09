@@ -57,16 +57,22 @@ nnoremap <leader>qq :q<CR>
 nnoremap <Tab> :b#<CR>
 nnoremap <C-S-[> :bp<BAR>bd#<CR>
 nnoremap <C-S-]> :bn<BAR>bd#<CR>
-nnoremap <UP> :bp<CR>
-nnoremap <DOWN> :bn<CR>
-nnoremap <LEFT> :tabprevious<CR>
-nnoremap <RIGHT> :tabnext<CR>
+nnoremap <S-UP> :bp<CR>
+nnoremap <S-DOWN> :bn<CR>
+nnoremap <S-LEFT> :tabprevious<CR>
+nnoremap <S-RIGHT> :tabnext<CR>
+
+tnoremap <S-Tab> <C-\><C-n>:b#<CR>
+tnoremap <S-DOWN> <C-\><C-n>:bn<CR>
+tnoremap <S-UP> <C-\><C-n>:bp<CR>
+tnoremap <S-LEFT> <C-\><C-n>:tabprevious<CR>
+tnoremap <S-RIGHT> <C-\><C-n>:tabnext<CR>
 
 " Window resizing
-nnoremap <S-RIGHT> <C-w>>
-nnoremap <S-LEFT> <C-w><
-nnoremap <S-UP> <C-w>-
-nnoremap <S-DOWN> <C-w>+
+nnoremap <C-S-RIGHT> <C-w>>
+nnoremap <C-S-LEFT> <C-w><
+nnoremap <C-S-UP> <C-w>-
+nnoremap <C-S-DOWN> <C-w>+
 
 " Neovim terminal
 augroup terminal
@@ -82,9 +88,6 @@ tnoremap <C-h> <C-\><C-n><C-w>h
 tnoremap <C-l> <C-\><C-n><C-w>l
 tnoremap <C-j> <C-\><C-n><C-w>j
 tnoremap <C-k> <C-\><C-n><C-w>k
-tnoremap <S-Tab> <C-\><C-n>:b#<CR>
-tnoremap <S-DOWN> <C-\><C-n>:bn<CR>
-tnoremap <S-UP> <C-\><C-n>:bp<CR>
 
 " ----------------------------------------------------------
 " Plugin mappings
