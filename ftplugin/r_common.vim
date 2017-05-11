@@ -11,6 +11,12 @@ let R_assign_map = "<M-->"
 "let r_indent_ess_compatible = 1 
 let R_nvim_wd = 1
 
+" Use Tmux for R console
+let R_in_buffer = 0
+let R_tmux_split = 1
+"let R_term_cmd = "termite --icon=/usr/share/pixmaps/r.png --title=R -e"
+"let R_term_cmd = "termite -e"
+
 " Change 'd' mappings to allow for quick <leader>d calls
 nmap <buffer> <localleader>tt <Plug>RDputObj
 vmap <buffer> <localleader>tt <Plug>RDputObj
