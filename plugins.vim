@@ -35,8 +35,9 @@ Plug 'jalvesaq/Nvim-R'                    " Neovim R plugin
 Plug 'vim-latex/vim-latex'                " LaTex
 Plug 'vimwiki/vimwiki'                    " Vim Wiki - Awesome note-taking plugin!
 Plug 'mattn/calendar-vim'                 " Powerful calendar inside vim
-Plug 'chrisbra/csv.vim'                   " For working with CSV's
+"Plug 'chrisbra/csv.vim'                   " For working with CSV's
 Plug 'vim-pandoc/vim-pandoc'
+Plug 'mattn/emmet-vim'                    " HTML snippet plugin
 "Plug 'davidhalter/jedi-vim'              " Python autocompletion
 "Plug 'ivanov/vim-ipython'
 "Plug 'scrooloose/syntastic'              " Syntax checking
