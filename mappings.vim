@@ -55,8 +55,8 @@ nnoremap <leader>ps :set wrap!<CR>
 " Buffer management
 nnoremap <leader>qq :q<CR>
 nnoremap <Tab> :b#<CR>
-nnoremap <C-S-[> :bp<BAR>bd#<CR>
-nnoremap <C-S-]> :bn<BAR>bd#<CR>
+nnoremap <S-Q>h :bp<BAR>bd#<CR>
+nnoremap <S-Q>l :bn<BAR>bd#<CR>
 nnoremap <S-UP> :bp<CR>
 nnoremap <S-DOWN> :bn<CR>
 nnoremap <S-LEFT> :tabprevious<CR>
@@ -88,6 +88,11 @@ tnoremap <C-h> <C-\><C-n><C-w>h
 tnoremap <C-l> <C-\><C-n><C-w>l
 tnoremap <C-j> <C-\><C-n><C-w>j
 tnoremap <C-k> <C-\><C-n><C-w>k
+
+" Quickfix menu
+nnoremap <leader>co :copen<CR>
+nnoremap <leader>cq :cclose<CR>
+nnoremap <leader>cx :cexpr []<CR>
 
 " ----------------------------------------------------------
 " Plugin mappings
