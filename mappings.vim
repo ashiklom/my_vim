@@ -140,6 +140,11 @@ let g:AutoPairsMapCh = 0
 nmap <localleader><enter> <Plug>IMAP_JumpForward
 imap <C-U> <Plug>IMAP_JumpForward
 
+" Far
+augroup far
+    autocmd FileType far_vim map <buffer><silent>q :bw<cr>
+augroup END
+
 " calendar.vim
 "nmap <leader>cal :Calendar<CR>
 ":command! -nargs=1 Silent execute ':silent '.<q-args> | execute ':redraw!'
