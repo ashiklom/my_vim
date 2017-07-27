@@ -12,7 +12,7 @@ set nowrap          " Soft line wrapping
 set linebreak       " Break lines at logical places
 set breakindent     " Align soft wrap
 "set breakindentopt=shift:2
-set lazyredraw      " don't withdraw while executing macros
+"set lazyredraw      " don't withdraw while executing macros
 set nolist          " display certain characters
 set listchars=tab:>-    " String for displaying tabs
 set number          " line numbers
