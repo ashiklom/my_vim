@@ -31,6 +31,7 @@ Plug 'jiangmiao/auto-pairs'               " Automatically close quotes, parenthe
 Plug 'junegunn/vim-easy-align'            " Easy align
 
 " Full filetype plugins
+Plug 'jalvesaq/r-vim-runtime'             " Newer version of default Vim runtime files
 Plug 'jalvesaq/Nvim-R'                    " Neovim R plugin
 Plug 'vim-latex/vim-latex'                " LaTex
 Plug 'vimwiki/vimwiki'                    " Vim Wiki - Awesome note-taking plugin!
