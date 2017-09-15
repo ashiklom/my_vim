@@ -7,7 +7,7 @@ set termguicolors
 set incsearch		" search as characters are entered
 set ignorecase          " Ignore case in search
 set smartcase           " Only ignore case if all lowercase
-set guicursor=
+set guicursor=a:blinkon1,a:blinkoff1
 
 set nowrap          " Soft line wrapping
 set linebreak       " Break lines at logical places
