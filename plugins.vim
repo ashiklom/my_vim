@@ -58,6 +58,7 @@ Plug 'vim-pandoc/vim-pandoc-syntax'
 Plug 'tpope/vim-obsession'                " Session management
 Plug 'SirVer/ultisnips'                   " Snippets
 Plug 'kshenoy/vim-signature'              " Display marks, and additional mark tools
+Plug 'tpope/tpope-vim-abolish'            " Better search, substitution, and abbreviation
 
 call plug#end()
 
