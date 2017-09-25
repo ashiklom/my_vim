@@ -16,10 +16,10 @@ inoremap jk <ESC>
 nnoremap <leader><space> :nohlsearch<cr>
 
 "Move based on visual lines 
-nnoremap j gj
-nnoremap k gk
-vnoremap j gj
-vnoremap k gk
+nnoremap <expr> j v:count == 0 ? 'gj' : 'j'
+nnoremap <expr> k v:count == 0 ? 'gk' : 'k'
+vnoremap <expr> j v:count == 0 ? 'gj' : 'j'
+vnoremap <expr> k v:count == 0 ? 'gk' : 'k'
 
 " Select to end/beginning of line
 vnoremap <Return> $h
