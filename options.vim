@@ -35,10 +35,10 @@ set backspace=2          " Fix backspace behavior
 set noshowmatch          " do not show matching parentheses
 set formatoptions=qwj   " No autoformatting by default
 
-set tabstop=8
-set shiftwidth=4    " size of an indent
+set tabstop=4       " size of an indent.
+set shiftwidth=0    " these settings make all tabs use `tabstop` value
+set softtabstop=-1
 set smarttab
-set softtabstop=4
 set shiftround      " use multiple of shiftwidth when indenting with <or >
 set expandtab       " tabs are spaces
 set autoindent
