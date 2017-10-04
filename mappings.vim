@@ -57,22 +57,22 @@ nnoremap <leader>qq :q<CR>
 nnoremap <Tab> :b#<CR>
 nnoremap <S-Q>h :bp<BAR>bd#<CR>
 nnoremap <S-Q>l :bn<BAR>bd#<CR>
-nnoremap <S-UP> :bp<CR>
-nnoremap <S-DOWN> :bn<CR>
-nnoremap <S-LEFT> :tabprevious<CR>
-nnoremap <S-RIGHT> :tabnext<CR>
-
-tnoremap <S-Tab> <C-\><C-n>:b#<CR>
-tnoremap <S-DOWN> <C-\><C-n>:bn<CR>
-tnoremap <S-UP> <C-\><C-n>:bp<CR>
-tnoremap <S-LEFT> <C-\><C-n>:tabprevious<CR>
-tnoremap <S-RIGHT> <C-\><C-n>:tabnext<CR>
+nnoremap <LEFT> :bp<CR>
+nnoremap <RIGHT> :bn<CR>
+nnoremap <UP> :tabprevious<CR>
+nnoremap <DOWN> :tabnext<CR>
 
 " Window resizing
 nnoremap <C-S-RIGHT> <C-w>>
 nnoremap <C-S-LEFT> <C-w><
 nnoremap <C-S-UP> <C-w>-
 nnoremap <C-S-DOWN> <C-w>+
+
+tnoremap <S-Tab> <C-\><C-n>:b#<CR>
+tnoremap <S-DOWN> <C-\><C-n>:bn<CR>
+tnoremap <S-UP> <C-\><C-n>:bp<CR>
+tnoremap <S-LEFT> <C-\><C-n>:tabprevious<CR>
+tnoremap <S-RIGHT> <C-\><C-n>:tabnext<CR>
 
 " Neovim terminal
 augroup terminal
@@ -112,9 +112,6 @@ augroup calendar
     au FileType calendar nmap <buffer> h lNN:noh<CR>
 augroup END
 
-" neomake
-nmap <leader>nm :Neomake!<CR>
-
 " nvim-ipy
 " Disable default mappings. See ftplugin/python.vim for mappings
 let g:nvim_ipy_perform_mappings = 0
@@ -122,11 +119,9 @@ let g:nvim_ipy_perform_mappings = 0
 " Easy align 
 xmap ga <Plug>(EasyAlign)
 nmap ga <Plug>(EasyAlign)
-"map <leader>ea :Tabularize /
-"map <leader>et :Tabularize //l3c1l0<left><left><left><left><left><left><left>
 
 " UltiSnips (default mappings, just making them explicit)
-map <leader>ue :UltiSnipsEdit<CR>
+nnoremap <leader>ue :UltiSnipsEdit<CR>
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-]>"
 let g:UltiSnipsJumpBackwardTrigger="<c-[>"
@@ -136,14 +131,20 @@ let g:UltiSnipsSnippetsDir=vimdir . "UltiSnips"
 " Don't map control-H
 let g:AutoPairsMapCh = 0
 
-" LaTeX (has tobe here to enable <C-J>)
-nmap <localleader><enter> <Plug>IMAP_JumpForward
-imap <C-U> <Plug>IMAP_JumpForward
-
 " Far
 augroup far
     autocmd FileType far_vim map <buffer><silent>q :bw<cr>
 augroup END
+
+" DetectIndent
+nnoremap <leader>di :DetectIndent<CR>
+
+" Deprecated...
+
+" LaTeX (has tobe here to enable <C-J>)
+"nmap <localleader><enter> <Plug>IMAP_JumpForward
+"imap <C-U> <Plug>IMAP_JumpForward
+
 
 " calendar.vim
 "nmap <leader>cal :Calendar<CR>
@@ -153,3 +154,6 @@ augroup END
 " YouCompleteMe
 "let g:ycm_key_invoke_completion = '<tab>'
 "let g:ycm_auto_trigger = 0
+
+" neomake
+"nmap <leader>nm :Neomake!<CR>

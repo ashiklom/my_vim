@@ -2,7 +2,6 @@ call plug#begin(vimdir . 'bundle')
 
 " Aesthetics
 Plug 'bling/vim-airline'                  " Nice status bar for buffers
-"Plug 'bling/vim-bufferline'
 Plug 'ashiklom/vim-colorschemes'          " Big library of vim color schemes!
 
 " Version control
@@ -10,10 +9,8 @@ Plug 'tpope/vim-fugitive'                 " Great Git program!
 Plug 'airblade/vim-gitgutter'             " Display git changes in real time
 
 " File management
-Plug 'Shougo/denite.nvim'                 " Unifying interface for vim
 Plug 'junegunn/fzf', {'do' : './install --all'}
 Plug 'junegunn/fzf.vim'
-Plug 'benekastah/neomake'                 " Asynchronous make through neovim
 Plug 'scrooloose/nerdtree'                " File browser
 Plug 'brooth/far.vim'                     " Find-replace across files
 Plug 'vim-scripts/rename'                 " Rename current file
@@ -31,34 +28,34 @@ Plug 'jiangmiao/auto-pairs'               " Automatically close quotes, parenthe
 Plug 'junegunn/vim-easy-align'            " Easy align
 
 " Full filetype plugins
-Plug 'jalvesaq/r-vim-runtime'             " Newer version of default Vim runtime files
-Plug 'jalvesaq/Nvim-R'                    " Neovim R plugin
-Plug 'vim-latex/vim-latex'                " LaTex
-Plug 'vimwiki/vimwiki'                    " Vim Wiki - Awesome note-taking plugin!
-Plug 'mattn/calendar-vim'                 " Powerful calendar inside vim
-"Plug 'chrisbra/csv.vim'                   " For working with CSV's
+Plug 'jalvesaq/Nvim-R', {'for' : 'r'}
+Plug 'jalvesaq/r-vim-runtime', {'for' : 'r'} " Newer version of default Vim runtime files
 Plug 'vim-pandoc/vim-pandoc'
-Plug 'mattn/emmet-vim'                    " HTML snippet plugin
-"Plug 'davidhalter/jedi-vim'              " Python autocompletion
-"Plug 'ivanov/vim-ipython'
-"Plug 'scrooloose/syntastic'              " Syntax checking
+Plug 'mattn/emmet-vim', {'for' : 'html'}     " HTML snippet plugin
+Plug 'bfredl/nvim-ipy', {'for' : 'python'}   " IPython in Neovim
 
-" Simple syntax highlighting
-Plug 'tmux-plugins/vim-tmux'              " For tmux conf file
-Plug 'maverickg/stan.vim'                 " For STAN model files
-Plug 'pangloss/vim-javascript'
-Plug 'exu/pgsql.vim'                      " PostgreSQL syntax highlighting
-Plug 'bfredl/nvim-ipy'                    " IPython in Neovim
+" Syntax highlighting
+Plug 'sheerun/vim-polyglot'               " Large syntax highlighting library
+Plug 'maverickg/stan.vim'
 Plug 'vim-scripts/bbcode'
 Plug 'vim-pandoc/vim-pandoc-syntax'
-"Plug 'zorab47/vim-gams'                   " Gams syntax and formatting
-"Plug 'plasticboy/vim-markdown'
 
 " Other
 Plug 'tpope/vim-obsession'                " Session management
 Plug 'SirVer/ultisnips'                   " Snippets
 Plug 'kshenoy/vim-signature'              " Display marks, and additional mark tools
 Plug 'tpope/tpope-vim-abolish'            " Better search, substitution, and abbreviation
+
+" Not used
+"Plug 'benekastah/neomake'                 " Asynchronous make through neovim
+"Plug 'Shougo/denite.nvim'                 " Unifying interface for vim
+"Plug 'zorab47/vim-gams'                   " Gams syntax and formatting
+"Plug 'davidhalter/jedi-vim'               " Python autocompletion
+"Plug 'scrooloose/syntastic'               " Syntax checking
+"Plug 'vim-latex/vim-latex'                " LaTex
+"Plug 'vimwiki/vimwiki'                    " Vim Wiki - Awesome note-taking plugin!
+"Plug 'mattn/calendar-vim'                 " Powerful calendar inside vim
+"Plug 'chrisbra/csv.vim'                   " For working with CSV's
 
 call plug#end()
 

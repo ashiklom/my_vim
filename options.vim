@@ -4,23 +4,23 @@
 "endif
 set termguicolors
 
-set incsearch		" search as characters are entered
-set ignorecase          " Ignore case in search
-set smartcase           " Only ignore case if all lowercase
-set guicursor=a:blinkon1,a:blinkoff1
+set incsearch    " search as characters are entered
+set ignorecase   " Ignore case in search
+set smartcase    " Only ignore case if all lowercase
+set guicursor=
 
 set nowrap          " Soft line wrapping
 set linebreak       " Break lines at logical places
 set breakindent     " Align soft wrap
 "set breakindentopt=shift:2
 "set lazyredraw      " don't withdraw while executing macros
-set nolist          " display certain characters
+set nolist          " toggle displaying list characters
 set listchars=tab:>-    " String for displaying tabs
 set number          " line numbers
 set scrolloff=2     " Scroll this many lines before hitting the bottom of the screen
 
-set hlsearch		" highlight matches
-set cursorline      " highlight current line
+set hlsearch     " highlight matches
+set cursorline   " highlight current line
 
 set laststatus=2        " Status bar always on
 set hidden              " Modified buffers in background
@@ -35,17 +35,15 @@ set backspace=2          " Fix backspace behavior
 set noshowmatch          " do not show matching parentheses
 set formatoptions=qwj   " No autoformatting by default
 
-set tabstop=4       " size of an indent.
-set shiftwidth=0    " these settings make all tabs use `tabstop` value
+set tabstop=4      " size of an indent.
+set shiftwidth=0   " these settings make all tabs use `tabstop` value
 set softtabstop=-1
 set smarttab
-set shiftround      " use multiple of shiftwidth when indenting with <or >
-set expandtab       " tabs are spaces
+set shiftround     " use multiple of shiftwidth when indenting with <or >
+set expandtab      " tabs are spaces
 set autoindent
-set copyindent      " copy previous indentation on autoindenting
-
-"set cindent             " C-style indenting rules
-"set cinoptions=(0,W4,m1    " Indent long lines ending in parentheses (e.g. function arguments)
+set copyindent     " copy previous indentation on autoindenting
+set nocindent      " Don't use C-style indenting rules
 
 set foldenable
 set foldlevelstart=99
