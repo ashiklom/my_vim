@@ -139,6 +139,9 @@ augroup END
 " DetectIndent
 nnoremap <leader>di :DetectIndent<CR>
 
+" Indent guides
+nnoremap <silent> <leader>it :IndentGuidesToggle<CR>
+
 " Deprecated...
 
 " LaTeX (has tobe here to enable <C-J>)

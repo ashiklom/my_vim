@@ -45,6 +45,7 @@ Plug 'tpope/vim-obsession'                " Session management
 Plug 'SirVer/ultisnips'                   " Snippets
 Plug 'kshenoy/vim-signature'              " Display marks, and additional mark tools
 Plug 'tpope/tpope-vim-abolish'            " Better search, substitution, and abbreviation
+Plug 'nathanaelkane/vim-indent-guides'
 
 " Not used
 "Plug 'benekastah/neomake'                 " Asynchronous make through neovim
