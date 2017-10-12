@@ -15,7 +15,7 @@ inoremap jk <ESC>
 " Clear search highlights with <leader> <space>
 nnoremap <leader><space> :nohlsearch<cr>
 
-"Move based on visual lines 
+"Move based on visual lines
 nnoremap <expr> j v:count == 0 ? 'gj' : 'j'
 nnoremap <expr> k v:count == 0 ? 'gk' : 'k'
 vnoremap <expr> j v:count == 0 ? 'gj' : 'j'
@@ -94,6 +94,10 @@ nnoremap <leader>co :copen<CR>
 nnoremap <leader>cq :cclose<CR>
 nnoremap <leader>cx :cexpr []<CR>
 
+" Trailing whitespace
+nnoremap <silent> <leader>ss /\s\+$<CR>``
+nnoremap <silent> <leader>sd :%s///g<CR>``
+
 " ----------------------------------------------------------
 " Plugin mappings
 " ----------------------------------------------------------
@@ -116,7 +120,7 @@ augroup END
 " Disable default mappings. See ftplugin/python.vim for mappings
 let g:nvim_ipy_perform_mappings = 0
 
-" Easy align 
+" Easy align
 xmap ga <Plug>(EasyAlign)
 nmap ga <Plug>(EasyAlign)
 
