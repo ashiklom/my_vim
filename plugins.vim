@@ -62,3 +62,4 @@ call plug#end()
 filetype plugin indent on
 syntax enable
 
+let g:polyglot_disabled = ['r']

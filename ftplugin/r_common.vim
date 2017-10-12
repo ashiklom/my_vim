@@ -12,6 +12,10 @@ let R_min_editor_width = 60
 let R_pdfviewer = 'okular'
 let R_assign_map = "<M-->"
 let R_nvim_wd = 1
+let R_clear_line = 1
+
+let R_objbr_place = "console,top"
+let R_objbr_h = 10
 
 function! Ralign()
     setlocal nocindent
@@ -21,7 +25,7 @@ endfunction
 
 function! Rcindent()
     setlocal cindent
-    let &cinoptions = "(0,W" . &tabstop . "m1"
+    let &cinoptions = "(0,W" . &tabstop . ",m1"
     let g:r_indent_align_args = 0
     echom 'Using cindent'
 endfunction
@@ -47,6 +51,11 @@ inoremap <buffer> <M-3> #<C-v>'<space>
 
 " Insert line of comment tags
 nnoremap <buffer> <localleader>cc 060i#<ESC>j
+
+" Custom R commands
+nmap <silent> <localleader>vl :call g:SendCmdToR("devtools::load_all('.')")<CR>
+nmap <silent> <localleader>vd :call g:SendCmdToR("devtools::document('.')")<CR>
+nmap <silent> <localleader>vi :call g:SendCmdToR("devtools::install('.')")<CR>
 
 " Use Tmux for R console
 "let R_in_buffer = 0
