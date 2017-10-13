@@ -41,11 +41,15 @@ Plug 'vim-scripts/bbcode'
 Plug 'vim-pandoc/vim-pandoc-syntax'
 
 " Other
-Plug 'tpope/vim-obsession'                " Session management
-Plug 'SirVer/ultisnips'                   " Snippets
-Plug 'kshenoy/vim-signature'              " Display marks, and additional mark tools
-Plug 'tpope/tpope-vim-abolish'            " Better search, substitution, and abbreviation
-Plug 'nathanaelkane/vim-indent-guides'
+Plug 'tpope/vim-obsession'              " Session management
+Plug 'SirVer/ultisnips'                 " Snippets
+Plug 'kshenoy/vim-signature'            " Display marks, and additional mark tools
+Plug 'tpope/tpope-vim-abolish'          " Better search, substitution, and abbreviation
+Plug 'nathanaelkane/vim-indent-guides'  " Indentation guides
+Plug 'w0rp/ale'                         " Asynchronous code linting
+
+"Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+"Plug 'Shougo/neosnippet.vim'
 
 " Not used
 "Plug 'benekastah/neomake'                 " Asynchronous make through neovim
