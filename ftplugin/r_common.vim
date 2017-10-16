@@ -43,8 +43,8 @@ nmap <buffer> <localleader>tt <Plug>RDputObj
 vmap <buffer> <localleader>tt <Plug>RDputObj
 
 " Key shortcut for pipe
-inoremap <buffer> <M-m> <space>%>%<space>
-inoremap <buffer> <M-t> <space>%T>%<space>
+inoremap <buffer> <M-m> <space>%>%
+inoremap <buffer> <M-t> <space>%T>%
 
 " Key shortcut for roxygen comment
 inoremap <buffer> <M-3> #<C-v>'<space>

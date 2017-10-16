@@ -95,8 +95,8 @@ nnoremap <leader>cq :cclose<CR>
 nnoremap <leader>cx :cexpr []<CR>
 
 " Trailing whitespace
-nnoremap <silent> <leader>ss /\s\+$<CR>``
-nnoremap <silent> <leader>sd :%s///g<CR>``
+nnoremap <silent> <leader>ss /\s\+$<CR>``:nohlsearch<CR>
+nnoremap <silent> <leader>sd :%s/\s\+$//g<CR>``:nohlsearch<CR>
 
 " ----------------------------------------------------------
 " Plugin mappings
