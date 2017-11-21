@@ -7,7 +7,6 @@ set termguicolors
 set incsearch    " search as characters are entered
 set ignorecase   " Ignore case in search
 set smartcase    " Only ignore case if all lowercase
-set guicursor=
 
 set nowrap          " Soft line wrapping
 set linebreak       " Break lines at logical places
@@ -62,3 +61,5 @@ set wildmenu        " visual autocomplete for command menu
 set undofile
 let &undodir = vimdir . "undodir"  " Directory for persistent undo
 set shell=/bin/zsh      " Set zsh to default shell
+
+let g:pandoc#modules#disabled = ["folding"]

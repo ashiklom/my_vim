@@ -59,8 +59,8 @@ nnoremap <S-Q>h :bp<BAR>bd#<CR>
 nnoremap <S-Q>l :bn<BAR>bd#<CR>
 nnoremap <LEFT> :bp<CR>
 nnoremap <RIGHT> :bn<CR>
-nnoremap <UP> :tabprevious<CR>
-nnoremap <DOWN> :tabnext<CR>
+nnoremap <S-LEFT> :tabprevious<CR>
+nnoremap <S-RIGHT> :tabnext<CR>
 
 " Window resizing
 nnoremap <C-S-RIGHT> <C-w>>
@@ -69,16 +69,16 @@ nnoremap <C-S-UP> <C-w>-
 nnoremap <C-S-DOWN> <C-w>+
 
 tnoremap <S-Tab> <C-\><C-n>:b#<CR>
-tnoremap <S-DOWN> <C-\><C-n>:bn<CR>
-tnoremap <S-UP> <C-\><C-n>:bp<CR>
+tnoremap <C-RIGHT> <C-\><C-n>:bn<CR>
+tnoremap <C-LEFT> <C-\><C-n>:bp<CR>
 tnoremap <S-LEFT> <C-\><C-n>:tabprevious<CR>
 tnoremap <S-RIGHT> <C-\><C-n>:tabnext<CR>
 
 " Neovim terminal
-augroup terminal
-    autocmd BufWinEnter,WinEnter term://* startinsert
-    autocmd BufLeave term://* stopinsert
-augroup END
+"augroup terminal
+    "autocmd BufWinEnter,WinEnter term://* startinsert
+    "autocmd BufLeave term://* stopinsert
+"augroup END
 
 nnoremap gtt :terminal<CR>
 nnoremap gts :split<BAR>terminal<CR>
@@ -93,6 +93,11 @@ tnoremap <C-k> <C-\><C-n><C-w>k
 nnoremap <leader>co :copen<CR>
 nnoremap <leader>cq :cclose<CR>
 nnoremap <leader>cx :cexpr []<CR>
+
+augroup quickfixmenu
+    autocmd BufReadPost quickfix nnoremap <buffer><silent> q :cclose<CR>
+augroup END
+
 
 " Trailing whitespace
 nnoremap <silent> <leader>ss /\s\+$<CR>``:nohlsearch<CR>
@@ -145,6 +150,10 @@ nnoremap <leader>di :DetectIndent<CR>
 
 " Indent guides
 nnoremap <silent> <leader>it :IndentGuidesToggle<CR>
+
+" Asynchronous make with vim-dispatch
+nnoremap <leader>mm :Make!<CR>
+nnoremap <leader>mo :Copen<CR>
 
 " Deprecated...
 
