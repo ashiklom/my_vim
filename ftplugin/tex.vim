@@ -7,12 +7,13 @@
 setlocal shiftwidth=2
 setlocal iskeyword+=:
 
-" LaTeX 
-setlocal grepprg=grep\ -nH\ $*
+"" LaTeX 
+"setlocal grepprg=grep\ -nH\ $*
 let g:tex_flavor='latex'
-let g:Tex_DefaultFormat = 'pdf'
-let g:Tex_MultipleCompileFormats = 'pdf, aux'
+setlocal wrap
+"let g:Tex_DefaultFormat = 'pdf'
+"let g:Tex_MultipleCompileFormats = 'pdf, aux'
 
-" Quick make and view
-"nnoremap <leader>mk    " Use neomake (,nm) instead
-nnoremap <leader>vv :!xdg-open *.pdf &<CR><CR>
+"" Quick make and view
+""nnoremap <leader>mk    " Use neomake (,nm) instead
+"nnoremap <leader>vv :!xdg-open *.pdf &<CR><CR>

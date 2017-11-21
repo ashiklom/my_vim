@@ -1,4 +1,4 @@
 " Common settings for all text files
-set wrap
-set spell
+setlocal wrap
+setlocal spell
 "set textwidth=78
