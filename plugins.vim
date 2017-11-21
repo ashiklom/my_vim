@@ -28,11 +28,12 @@ Plug 'jiangmiao/auto-pairs'               " Automatically close quotes, parenthe
 Plug 'junegunn/vim-easy-align'            " Easy align
 
 " Full filetype plugins
-Plug 'jalvesaq/Nvim-R', {'for' : 'r'}
-Plug 'jalvesaq/r-vim-runtime', {'for' : 'r'} " Newer version of default Vim runtime files
+Plug 'jalvesaq/Nvim-R', {'for' : ['r', 'rmd']}
+Plug 'jalvesaq/r-vim-runtime', {'for' : ['r', 'rmd']} " Newer version of default Vim runtime files
 Plug 'vim-pandoc/vim-pandoc'
 Plug 'mattn/emmet-vim', {'for' : 'html'}     " HTML snippet plugin
 Plug 'bfredl/nvim-ipy', {'for' : 'python'}   " IPython in Neovim
+Plug 'lervag/vimtex'
 
 " Syntax highlighting
 Plug 'sheerun/vim-polyglot'               " Large syntax highlighting library
@@ -47,6 +48,7 @@ Plug 'kshenoy/vim-signature'            " Display marks, and additional mark too
 Plug 'tpope/tpope-vim-abolish'          " Better search, substitution, and abbreviation
 Plug 'nathanaelkane/vim-indent-guides'  " Indentation guides
 Plug 'w0rp/ale'                         " Asynchronous code linting
+Plug 'tpope/vim-dispatch'               " Asynchronous execution
 
 "Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 "Plug 'Shougo/neosnippet.vim'
@@ -67,4 +69,4 @@ call plug#end()
 filetype plugin indent on
 syntax enable
 
-let g:polyglot_disabled = ['r']
+let g:polyglot_disabled = ["r-lang", "latex"]
