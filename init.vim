@@ -14,3 +14,4 @@ exec "source " . vimdir . "mappings.vim"
 exec "source " . vimdir . "appearance.vim"
 
 exec "source " . vimdir . "fzf.vim"
+exec "source " . vimdir . "remote.vim"
