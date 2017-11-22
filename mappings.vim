@@ -81,13 +81,13 @@ tnoremap <S-RIGHT> <C-\><C-n>:tabnext<CR>
 "augroup END
 
 nnoremap gtt :terminal<CR>
-nnoremap gts :split<BAR>terminal<CR>
-nnoremap gtv :vsplit<BAR>terminal<CR>
-tnoremap <ESC> <C-\><C-n>
-tnoremap <C-h> <C-\><C-n><C-w>h
-tnoremap <C-l> <C-\><C-n><C-w>l
-tnoremap <C-j> <C-\><C-n><C-w>j
-tnoremap <C-k> <C-\><C-n><C-w>k
+nnoremap gts :call Hterm()<CR>
+nnoremap gtv :call Vterm()<CR>
+tnoremap <C-A> <C-\><C-n>
+tnoremap <C-w>h <C-\><C-n><C-w>h
+tnoremap <C-w>l <C-\><C-n><C-w>l
+tnoremap <C-w>j <C-\><C-n><C-w>j
+tnoremap <C-w>k <C-\><C-n><C-w>k
 
 " Quickfix menu
 nnoremap <leader>co :copen<CR>
@@ -97,7 +97,6 @@ nnoremap <leader>cx :cexpr []<CR>
 augroup quickfixmenu
     autocmd BufReadPost quickfix nnoremap <buffer><silent> q :cclose<CR>
 augroup END
-
 
 " Trailing whitespace
 nnoremap <silent> <leader>ss /\s\+$<CR>``:nohlsearch<CR>

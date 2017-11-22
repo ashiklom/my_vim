@@ -10,6 +10,7 @@ endif
 exec "source " . vimdir . "plugins.vim"
 exec "source " . vimdir . "options.vim"
 exec "source " . vimdir . "wrap_functions.vim"
+exec "source " . vimdir . "functions.vim"
 exec "source " . vimdir . "mappings.vim"
 exec "source " . vimdir . "appearance.vim"
 
