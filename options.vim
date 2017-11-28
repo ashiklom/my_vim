@@ -63,3 +63,5 @@ let &undodir = vimdir . "undodir"  " Directory for persistent undo
 set shell=/bin/zsh      " Set zsh to default shell
 
 let g:pandoc#modules#disabled = ["folding"]
+
+

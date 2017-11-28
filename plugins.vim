@@ -50,6 +50,7 @@ Plug 'nathanaelkane/vim-indent-guides'  " Indentation guides
 Plug 'w0rp/ale'                         " Asynchronous code linting
 Plug 'tpope/vim-dispatch'               " Asynchronous execution
 Plug 'vimoutliner/vimoutliner'
+Plug 'qpkorr/vim-bufkill'
 
 "Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 "Plug 'Shougo/neosnippet.vim'
@@ -71,3 +72,4 @@ filetype plugin indent on
 syntax enable
 
 let g:polyglot_disabled = ["r-lang", "latex"]
+let g:BufKillCreateMappings = 0

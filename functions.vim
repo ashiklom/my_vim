@@ -1,6 +1,6 @@
 " Split in opposite direction of the current option
-command -nargs=? Vsplit :set splitright! | vsplit <args> | :set splitright!
-command -nargs=? Split :set splitbelow! | split <args> | :set splitbelow!
+command -nargs=? -complete=file Vsplit :set splitright! | vsplit <args> | :set splitright!
+command -nargs=? -complete=file Split :set splitbelow! | split <args> | :set splitbelow!
 
 " Open terminals
 function Hterm()
