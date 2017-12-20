@@ -38,3 +38,12 @@ endsnippet
 snippet rexp
 #' @export${0}
 endsnippet
+
+snippet udconv
+udunits2::ud.convert(${1}, "${2}", "${3}")
+endsnippet
+
+snippet ##- "knitr chunk"
+## ---- ${1} ----------
+${0}
+endsnippet
