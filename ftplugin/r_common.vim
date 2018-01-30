@@ -39,6 +39,8 @@ nmap <silent> <localleader>vl :call g:SendCmdToR("devtools::load_all('.')")<CR>
 nmap <silent> <localleader>vd :call g:SendCmdToR("devtools::document('.')")<CR>
 nmap <silent> <localleader>vi :call g:SendCmdToR("devtools::install('.')")<CR>
 nmap <silent> <localleader>vt :call g:SendCmdToR("devtools::test('.')")<CR>
+" Use styler to process text
+vnoremap <silent> <localleader>gf :!rstyle<CR>
 
 " Use Tmux for R console
 "let R_in_buffer = 0
