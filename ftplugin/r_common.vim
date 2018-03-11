@@ -39,6 +39,7 @@ nmap <silent> <localleader>vl :call g:SendCmdToR("devtools::load_all('.')")<CR>
 nmap <silent> <localleader>vd :call g:SendCmdToR("devtools::document('.')")<CR>
 nmap <silent> <localleader>vi :call g:SendCmdToR("devtools::install('.')")<CR>
 nmap <silent> <localleader>vt :call g:SendCmdToR("devtools::test('.')")<CR>
+nmap <silent> <localleader>vw :call g:SendCmdToR(".width(verbose = FALSE)")<CR>
 " Use styler to process text
 vnoremap <silent> <localleader>gf :!rstyle<CR>
 
