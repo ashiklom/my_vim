@@ -6,13 +6,16 @@ setlocal completeopt-=preview
 let g:pandoc#formatting#equalprg = ''
 
 " Vim-R plugin
-let R_nvimpager = "no"
+let R_nvimpager = "horizontal"
 let R_rconsole_width = 80
 let R_min_editor_width = 60
 let R_pdfviewer = 'evince'
 let R_assign_map = "<M-->"
 let R_nvim_wd = 1
 let R_clear_line = 1
+let R_complete = 2
+
+let R_tmpdir = "/tmp/Nvim-R-" . strftime("%Y%m%d%H%M%S")
 
 let R_objbr_place = "console,top"
 let R_objbr_h = 10
