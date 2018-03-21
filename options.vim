@@ -62,5 +62,7 @@ set undofile
 let &undodir = vimdir . "undodir"  " Directory for persistent undo
 set shell=/bin/zsh      " Set zsh to default shell
 
+set isfname-==      " My file names will never have `=` in them.
+
 let g:pandoc#modules#disabled = ["folding", "chdir"]
 
