@@ -48,8 +48,8 @@ nmap <silent> <localleader>vi :call g:SendCmdToR("devtools::install('.')")<CR>
 nmap <silent> <localleader>vt :call g:SendCmdToR("devtools::test('.')")<CR>
 nmap <silent> <localleader>vw :call g:SendCmdToR(".width(verbose = FALSE)")<CR>
 
-" dplyr
-nmap <silent> <localleader>dg :call g:SendCmdToR("dplyr::glimpse(".expand('<cword>').")")<CR>
+" tidyverse
+nmap <silent> <localleader>tg :call g:SendCmdToR("dplyr::glimpse(".expand('<cword>').")")<CR>
 
 " Use styler to process text
 vnoremap <silent> <localleader>gf :!rstyle<CR>
