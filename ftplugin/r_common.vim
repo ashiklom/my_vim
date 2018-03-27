@@ -23,9 +23,6 @@ let R_objbr_h = 10
 let r_indent_align_args = 1
 let r_indent_rstudio = 1
 
-" Highlight functions followed by parentheses (like in RStudio)
-let r_syntax_fun_pattern = 1
-
 " Change 'd' mappings to allow for quick <leader>d calls
 nmap <buffer> <localleader>tt <Plug>RDputObj
 vmap <buffer> <localleader>tt <Plug>RDputObj
