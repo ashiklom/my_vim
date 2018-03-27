@@ -23,6 +23,9 @@ let R_objbr_h = 10
 let r_indent_align_args = 1
 let r_indent_rstudio = 1
 
+" Highlight functions followed by parentheses (like in RStudio)
+let r_syntax_fun_pattern = 1
+
 " Change 'd' mappings to allow for quick <leader>d calls
 nmap <buffer> <localleader>tt <Plug>RDputObj
 vmap <buffer> <localleader>tt <Plug>RDputObj
@@ -38,11 +41,16 @@ inoremap <buffer> <C-C> #<C-v>'
 nnoremap <buffer> <localleader>cc 060i#<ESC>j
 
 " Custom R commands
+" devtools
 nmap <silent> <localleader>vl :call g:SendCmdToR("devtools::load_all('.')")<CR>
 nmap <silent> <localleader>vd :call g:SendCmdToR("devtools::document('.')")<CR>
 nmap <silent> <localleader>vi :call g:SendCmdToR("devtools::install('.')")<CR>
 nmap <silent> <localleader>vt :call g:SendCmdToR("devtools::test('.')")<CR>
 nmap <silent> <localleader>vw :call g:SendCmdToR(".width(verbose = FALSE)")<CR>
+
+" dplyr
+nmap <silent> <localleader>dg :call g:SendCmdToR("dplyr::glimpse(".expand('<cword>').")")<CR>
+
 " Use styler to process text
 vnoremap <silent> <localleader>gf :!rstyle<CR>
 
