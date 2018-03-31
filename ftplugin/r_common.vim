@@ -52,6 +52,9 @@ nmap <silent> <localleader>tg :call g:SendCmdToR("dplyr::glimpse(".expand('<cwor
 " Use styler to process text
 vnoremap <silent> <localleader>gf :!rstyle<CR>
 
+" Split selected path
+vnoremap <silent> <localleader>ps :s/\//", "/g<CR>:nohlsearch<CR>
+
 " Use Tmux for R console
 "let R_in_buffer = 0
 "let R_tmux_split = 1

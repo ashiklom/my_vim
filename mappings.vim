@@ -154,6 +154,9 @@ nnoremap <silent> <leader>it :IndentGuidesToggle<CR>
 nnoremap <leader>mm :Make!<CR>
 nnoremap <leader>mo :Copen<CR>
 
+" Open current directory
+nnoremap <silent> <leader>od :silent !browse<CR>
+
 " Deprecated...
 
 " LaTeX (has tobe here to enable <C-J>)
