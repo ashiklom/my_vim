@@ -73,3 +73,5 @@ syntax enable
 
 let g:polyglot_disabled = ["r-lang", "latex"]
 let g:BufKillCreateMappings = 0
+
+let g:tex_flavor = 'latex'
