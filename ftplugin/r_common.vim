@@ -32,6 +32,9 @@ vmap <buffer> <localleader>tt <Plug>RDputObj
 inoremap <buffer> <M-m> <space>%>%
 inoremap <buffer> <M-t> <space>%T>%
 
+" Zeallot multiple assignment
+inoremap <buffer> <M-z> <space>%<-%
+
 " Key shortcut for roxygen comment
 inoremap <buffer> <C-C> #<C-v>'
 
