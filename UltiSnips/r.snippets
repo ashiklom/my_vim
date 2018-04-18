@@ -132,3 +132,19 @@ endsnippet
 snippet rtm "PEcAnRTM" w
 PEcAnRTM
 endsnippet
+
+snippet pb? "Maybe add a progress bar"
+on.exit(if (!is.null(pb)) pb$tick())
+endsnippet
+
+snippet newpb "New progress bar" w
+progress_bar$new(${0})
+endsnippet
+
+snippet prog "Progress package" w
+progress::
+endsnippet
+
+snippet impb "Import progress bar" w
+import::from(progress, progress_bar)
+endsnippet
