@@ -66,3 +66,5 @@ set isfname-==      " My file names will never have `=` in them.
 
 let g:pandoc#modules#disabled = ["folding", "chdir"]
 
+" Fix terminal window width
+autocmd BufEnter term://* set winfixwidth
