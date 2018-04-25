@@ -5,8 +5,10 @@ Plug 'bling/vim-airline'                  " Nice status bar for buffers
 Plug 'ashiklom/vim-colorschemes'          " Big library of vim color schemes!
 
 " Version control
-Plug 'tpope/vim-fugitive'                 " Great Git program!
-Plug 'airblade/vim-gitgutter'             " Display git changes in real time
+if !exists('$SSHFS')
+    Plug 'tpope/vim-fugitive'                 " Great Git program!
+    Plug 'airblade/vim-gitgutter'             " Display git changes in real time
+endif
 
 " File management
 Plug 'junegunn/fzf', {'do' : './install --all'}
