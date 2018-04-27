@@ -30,7 +30,7 @@ Plug 'jiangmiao/auto-pairs'               " Automatically close quotes, parenthe
 Plug 'junegunn/vim-easy-align'            " Easy align
 
 " Full filetype plugins
-Plug 'ashiklom/Nvim-R', {'for' : ['r', 'rmd', 'rnoweb', 'vim'], 'branch' : 'upstream-master'}
+Plug 'jalvesaq/Nvim-R', {'for' : ['r', 'rmd', 'rnoweb', 'vim']}
 Plug 'ashiklom/r-vim-runtime', {'for' : ['r', 'rmd', 'rnoweb', 'vim']} " Newer version of default Vim runtime files
 Plug 'vim-pandoc/vim-pandoc'
 Plug 'mattn/emmet-vim', {'for' : 'html'}     " HTML snippet plugin
