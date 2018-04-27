@@ -52,6 +52,10 @@ nmap <silent> <localleader>vw :call g:SendCmdToR(".width(verbose = FALSE)")<CR>
 " tidyverse
 nmap <silent> <localleader>tg :call g:SendCmdToR("dplyr::glimpse(".expand('<cword>').")")<CR>
 
+" Help functions
+nmap <silent> <localleader>hp :call g:SendCmdToR("help(package = ".expand('<cword>').")")<CR>
+nmap <silent> <localleader>hi :call g:SendCmdToR("help(package = ".expand('<cword>').", help_type = 'HTML')")<CR>
+
 " Use styler to process text
 vnoremap <silent> <localleader>gf :!rstyle<CR>
 
