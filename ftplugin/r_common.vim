@@ -18,7 +18,7 @@ let R_setwidth = 2
 
 let R_tmpdir = "/tmp/Nvim-R-" . strftime("%Y%m%d%H%M%S")
 
-let R_objbr_place = "console,top"
+let R_objbr_place = "console,above"
 let R_objbr_h = 10
 
 let r_indent_align_args = 1
@@ -47,7 +47,9 @@ nmap <silent> <localleader>vl :call g:SendCmdToR("devtools::load_all('.')")<CR>
 nmap <silent> <localleader>vd :call g:SendCmdToR("devtools::document('.')")<CR>
 nmap <silent> <localleader>vi :call g:SendCmdToR("devtools::install('.')")<CR>
 nmap <silent> <localleader>vt :call g:SendCmdToR("devtools::test('.')")<CR>
+
 nmap <silent> <localleader>vw :call g:SendCmdToR(".width(verbose = FALSE)")<CR>
+nmap <silent> <localleader>vm :call g:SendCmdToR(".rmote()")<CR>
 
 " tidyverse
 nmap <silent> <localleader>tg :call g:SendCmdToR("dplyr::glimpse(".expand('<cword>').")")<CR>
