@@ -148,3 +148,22 @@ endsnippet
 snippet impb "Import progress bar" w
 import::from(progress, progress_bar)
 endsnippet
+
+snippet args "Command line arguments" w
+args <- commandArgs(trailingOnly = TRUE)
+endsnippet
+
+snippet iargs "If interactive, don't use command line arguments"
+args <- commandArgs(trailingOnly = TRUE)
+if (interactive()) {
+  args <- c(${1})
+}
+${0}
+endsnippet
+
+snippet imgur "Use imgur device" w
+i1 <- imguR::imgur("pdf")
+${0}
+i2 <- imguR::imgur_off(i1)
+i2$link
+endsnippet

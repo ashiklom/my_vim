@@ -1,7 +1,4 @@
 " Options (see :options)
-"if (exists("$TMUX"))
-    "set termguicolors 
-"endif
 set termguicolors
 
 set incsearch    " search as characters are entered
