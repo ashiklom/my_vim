@@ -157,6 +157,9 @@ nnoremap <leader>mo :Copen<CR>
 " Open current directory
 nnoremap <silent> <leader>od :silent !browse<CR>
 
+" Wrap arguments
+nnoremap <silent> gs :ArgWrap<CR>
+
 " Deprecated...
 
 " LaTeX (has tobe here to enable <C-J>)

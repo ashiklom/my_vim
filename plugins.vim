@@ -53,6 +53,7 @@ Plug 'w0rp/ale'                         " Asynchronous code linting
 Plug 'tpope/vim-dispatch'               " Asynchronous execution
 Plug 'vimoutliner/vimoutliner'
 Plug 'qpkorr/vim-bufkill'
+Plug 'FooSoft/vim-argwrap'
 
 "Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 "Plug 'Shougo/neosnippet.vim'
