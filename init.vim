@@ -16,3 +16,5 @@ exec "source " . vimdir . "appearance.vim"
 
 exec "source " . vimdir . "fzf.vim"
 exec "source " . vimdir . "remote.vim"
+
+"exec "source " . vimdir . "simplenote.vim"

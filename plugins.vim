@@ -55,6 +55,7 @@ Plug 'vimoutliner/vimoutliner'
 Plug 'qpkorr/vim-bufkill'
 Plug 'FooSoft/vim-argwrap'
 
+"Plug 'mrtazz/simplenote.vim'
 "Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 "Plug 'Shougo/neosnippet.vim'
 
