@@ -5,7 +5,7 @@
 
 " Additional custom settings
 setlocal shiftwidth=2
-setlocal iskeyword+=:
+setlocal iskeyword+=:,-
 
 "" LaTeX 
 "setlocal grepprg=grep\ -nH\ $*
@@ -18,6 +18,8 @@ setlocal wrap
 ""nnoremap <leader>mk    " Use neomake (,nm) instead
 "nnoremap <leader>vv :!xdg-open *.pdf &<CR><CR>
 
-" vim-surround: q for `foo' and Q for ``foo''
+" vim-surround:
+" q for `foo', Q for ``foo'', and c for \texttt{foo}
 let b:surround_{char2nr('q')} = "`\r'"
 let b:surround_{char2nr('Q')} = "``\r''"
+let b:surround_{char2nr('c')} = "\\texttt{\r}"

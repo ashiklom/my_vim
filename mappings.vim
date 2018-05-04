@@ -160,6 +160,12 @@ nnoremap <silent> <leader>od :silent !browse<CR>
 " Wrap arguments
 nnoremap <silent> gs :ArgWrap<CR>
 
+" Jump between Ale issues
+nmap <silent> [a <Plug>(ale_previous)
+nmap <silent> ]a <Plug>(ale_next)
+nmap <silent> [A <Plug>(ale_first)
+nmap <silent> ]A <Plug>(ale_last)
+
 " Deprecated...
 
 " LaTeX (has tobe here to enable <C-J>)
