@@ -17,3 +17,7 @@ setlocal wrap
 "" Quick make and view
 ""nnoremap <leader>mk    " Use neomake (,nm) instead
 "nnoremap <leader>vv :!xdg-open *.pdf &<CR><CR>
+
+" vim-surround: q for `foo' and Q for ``foo''
+let b:surround_{char2nr('q')} = "`\r'"
+let b:surround_{char2nr('Q')} = "``\r''"
