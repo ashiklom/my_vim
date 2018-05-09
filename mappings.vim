@@ -2,13 +2,15 @@
 let mapleader = ","
 let maplocalleader = "\\"
 
+" Comma by itself is useful for jumping backwards.
+nnoremap <leader>, ,
+
 " Disable 'Ex' mode
 map Q <Nop>
 
 " Disable man page view
 map K <Nop>
 
-nnoremap <Backspace> ,
 nnoremap S :w!<CR>
 inoremap jk <ESC>
 
@@ -20,6 +22,12 @@ nnoremap <expr> j v:count == 0 ? 'gj' : 'j'
 nnoremap <expr> k v:count == 0 ? 'gk' : 'k'
 vnoremap <expr> j v:count == 0 ? 'gj' : 'j'
 vnoremap <expr> k v:count == 0 ? 'gk' : 'k'
+
+" ...and use g<jk> to move down 'real' lines
+nnoremap gj j
+nnoremap gk k
+vnoremap gj j
+vnoremap gk k
 
 " Select to end/beginning of line
 vnoremap <Return> $h
@@ -53,7 +61,6 @@ nnoremap <leader>/ :set spell!<CR>
 nnoremap <leader>ps :set wrap!<CR>
 
 " Buffer management
-nnoremap <leader>qq :q<CR>
 nnoremap <Tab> :b#<CR>
 nnoremap <S-Q>h :bp<BAR>bd#<CR>
 nnoremap <S-Q>l :bn<BAR>bd#<CR>
