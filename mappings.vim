@@ -37,7 +37,7 @@ nnoremap <leader>sv :source $MYVIMRC<CR>
 " Map <leader>cd to change working directory to file location
 nnoremap <leader>cd :cd %:p:h<CR>:pwd<CR>
 
-" Windows
+" Windows and buffers
 nnoremap <silent> <leader>wh <C-w>h
 nnoremap <silent> <leader>wj <C-w>j
 nnoremap <silent> <leader>wk <C-w>k
@@ -45,9 +45,11 @@ nnoremap <silent> <leader>wl <C-w>l
 nnoremap <silent> <leader>wd <C-w>c
 nnoremap <silent> <leader>w\ :vsplit<CR>
 nnoremap <silent> <leader>w- :split<CR>
+nnoremap <silent> <leader>wW :bd<CR>
 
 " Completion
 inoremap <C-l> <C-x><C-o>
+inoremap <C-f> <C-x><C-f>
 
 " Easy indentation in insert mode
 " inoremap <C-l> <C-t>
