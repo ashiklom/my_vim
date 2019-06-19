@@ -1,9 +1,6 @@
 " Vanilla mappings
-let mapleader = ","
+let mapleader = " "
 let maplocalleader = "\\"
-
-" Comma by itself is useful for jumping backwards.
-nnoremap <leader>, ,
 
 " Disable 'Ex' mode
 map Q <Nop>
@@ -14,8 +11,8 @@ map K <Nop>
 nnoremap S :w!<CR>
 inoremap jk <ESC>
 
-" Clear search highlights with <leader> <space>
-nnoremap <leader><space> :nohlsearch<cr>
+" Clear search highlights
+nnoremap <leader>, :nohlsearch<cr>
 
 "Move based on visual lines
 nnoremap <expr> j v:count == 0 ? 'gj' : 'j'
@@ -40,22 +37,27 @@ nnoremap <leader>sv :source $MYVIMRC<CR>
 " Map <leader>cd to change working directory to file location
 nnoremap <leader>cd :cd %:p:h<CR>:pwd<CR>
 
-" Easy window navigation
-nnoremap <C-h> <C-w>h
-nnoremap <C-j> <C-w>j
-nnoremap <C-k> <C-w>k
-nnoremap <C-l> <C-w>l
-nnoremap <C-q> <C-w>c
+" Windows
+nnoremap <silent> <leader>wh <C-w>h
+nnoremap <silent> <leader>wj <C-w>j
+nnoremap <silent> <leader>wk <C-w>k
+nnoremap <silent> <leader>wl <C-w>l
+nnoremap <silent> <leader>wd <C-w>c
+nnoremap <silent> <leader>w\ :vsplit<CR>
+nnoremap <silent> <leader>w- :split<CR>
+
+" Completion
+inoremap <C-l> <C-x><C-o>
 
 " Easy indentation in insert mode
-inoremap <C-l> <C-t>
+" inoremap <C-l> <C-t>
 inoremap <C-h> <C-d>
 
 " Insert literal tab using Shift-tab (useful for code tables)
 inoremap <S-Tab> <C-V><Tab>
 
 " Spelling
-nnoremap <leader>/ :set spell!<CR>
+nnoremap <leader>? :set spell!<CR>
 
 " Toggle wrapping
 nnoremap <leader>ps :set wrap!<CR>

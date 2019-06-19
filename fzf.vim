@@ -7,7 +7,7 @@ nnoremap <leader>fg :GFiles<CR>
 nnoremap <leader>b :Buffers<CR>
 
 " Search in files
-nnoremap <leader>l :Lines<CR>
+nnoremap <leader>/ :Lines<CR>
 nnoremap <leader>rg :Rgrep 
 vnoremap <leader>rg "gy:Rgrep <C-R>g<CR>
 nnoremap <leader>rw :Rgrep <C-R><C-W><CR>
