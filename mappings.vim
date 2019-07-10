@@ -177,6 +177,10 @@ nmap <silent> ]a <Plug>(ale_next)
 nmap <silent> [A <Plug>(ale_first)
 nmap <silent> ]A <Plug>(ale_last)
 
+" NerdCommenter
+nmap <leader>; <Plug>NERDCommenterToggle
+vmap <leader>; <Plug>NERDCommenterToggle
+
 " Deprecated...
 
 " LaTeX (has tobe here to enable <C-J>)
