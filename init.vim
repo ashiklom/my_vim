@@ -1,18 +1,43 @@
-" Title: Core (neo)vim configuration
-" Author: Alexey Shiklomanov
+call plug#begin("~/.config/nvim/bundle")
 
-if has('nvim')
-    let vimdir = $HOME . '/.config/nvim/'
-else
-    let vimdir = $HOME . '/.vim/'
-endif
+Plug 'vim-scripts/rename'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-repeat'
+Plug 'jiangmiao/auto-pairs'
+Plug 'ashiklom/vim-colorschemes'
 
-exec "source " . vimdir . "plugins.vim"
-exec "source " . vimdir . "options.vim"
-exec "source " . vimdir . "wrap_functions.vim"
-exec "source " . vimdir . "functions.vim"
-exec "source " . vimdir . "mappings.vim"
-exec "source " . vimdir . "appearance.vim"
+Plug 'jalvesaq/Nvim-R', {'for' : ['r', 'rmd', 'rnoweb', 'vim']}
+Plug 'ashiklom/r-vim-runtime', {'for' : ['r', 'rmd', 'rnoweb', 'vim']} " Newer version of default Vim runtime files
+Plug 'vim-pandoc/vim-pandoc'
+Plug 'vim-pandoc/vim-pandoc-syntax'
+Plug 'maverickg/stan.vim'
+Plug 'sheerun/vim-polyglot'               " Large syntax highlighting library
 
-exec "source " . vimdir . "fzf.vim"
-exec "source " . vimdir . "remote.vim"
+call plug#end()
+
+filetype plugin indent on
+syntax enable
+
+let mapleader = " "
+let maplocalleader = "\\"
+let vimdir = $HOME . "/.config/nvim/"
+
+colorscheme molokai_custom
+
+map Q <Nop>
+inoremap jk <ESC>
+
+" Files
+nnoremap <leader>fs :w<CR>
+nnoremap <leader>ff :e 
+
+" Windows and buffers
+nnoremap <silent> <leader>wh <C-w>h
+nnoremap <silent> <leader>wj <C-w>j
+nnoremap <silent> <leader>wk <C-w>k
+nnoremap <silent> <leader>wl <C-w>l
+nnoremap <silent> <leader>wd <C-w>c
+nnoremap <silent> <leader>w\ :vsplit<CR>
+nnoremap <silent> <leader>w- :split<CR>
+
+nnoremap <silent> <leader>bk :bd<CR>
